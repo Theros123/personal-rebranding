@@ -1,0 +1,8 @@
+@import "app";
+
+.hero-row {
+  @include grid-row();
+  .hero-content {
+    @include grid-column(12);
+  }
+}
