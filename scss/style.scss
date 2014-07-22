@@ -108,6 +108,34 @@
 		}
 	}
 
+	&.about {
+		&.short-bio {
+			img {
+				@include grid-column(5);
+				
+				// To allow slight overlap over hero section
+				margin-top: -30px;
+			}
+			.text {
+				@include grid-column(7);
+			}
+		}
+		&.skills {
+			background: #e06666;
+
+			.column {
+				@include grid-column(4);
+			}
+		}
+		&.companies {
+			background: #eee;
+
+			.column {
+				@include grid-column(2);
+			}
+		}
+	}
+
 	&.writing {
 		.blockquote {
 			.text {
