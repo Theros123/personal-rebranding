@@ -1,7 +1,5 @@
 # Require any additional compass plugins here.
-add_import_path "bower_components/foundation/scss"
 
-# Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "stylesheets"
 sass_dir = "scss"
@@ -13,6 +11,7 @@ javascripts_dir = "js"
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
+additional_import_paths = ["bower_components/foundation/scss"]
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
@@ -22,4 +21,4 @@ javascripts_dir = "js"
 # project again passing --syntax sass, or you can uncomment this:
 # preferred_syntax = :sass
 # and then run:
-# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+# sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass

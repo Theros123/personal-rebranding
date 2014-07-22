@@ -1,8 +1,116 @@
 @import "app";
+@import "_mixins";
 
-.hero-row {
-  @include grid-row();
-  .hero-content {
-    @include grid-column(12);
-  }
+// Hero Section Styling
+
+.hero-overflow {
+	
+	height: 100%;
+	width: 100%;
+	// Fall back to prevent clipping when browser height is too small
+	min-height: 500px;
+
+	@media #{$small-only} {
+		min-height: inherit;
+	}
+	@media #{$xlarge-up} {
+		height: 768px;
+	}
+
+}
+
+.hero-wrapper {
+	
+	// SASS Foundation Columns
+	.hero-row {
+		@include grid-row();
+
+		.hero-content {
+			@include grid-column(12);
+		}
+	}
+
+	&.homepage {
+		// Need double quotes and spacing between numbers
+		@include calc(height, "100% - 150px");
+		overflow: hidden;
+
+		.hero-content {
+			img {
+				@include grid-column(7);
+			}
+			.text {
+				@include grid-column(5);
+			}
+		}
+	}
+
+	&.about {
+		// Need double quotes and spacing between numbers
+		@include calc(height, "100% - 60px");
+		@include background($filename: '../images/walk.png', $bgattachment: fixed);
+
+		// Fall back to prevent clipping when browser height is too small
+		min-height: 450px;
+	}
+
+	&.writing {
+		height: 300px;
+		@include background($filename: '../images/walk.png');
+	}
+
+}
+
+// Content Section Styling
+
+.content-section {
+
+	// SASS Foundation Columns
+	.content-row {
+		@include grid-row();
+
+		.content {
+			@include grid-column(12);
+		}
+	}
+
+	&.homepage {
+		&.hero-footer {
+			background: #e06666;
+			height: 150px;
+			overflow: hidden;
+
+			.thoughts {
+				@include grid-column(7);
+			}
+			.currently-reading {
+				@include grid-column(5);
+
+				height: 100%;
+				
+				// Make this better, add scalable styling
+				img {
+					float: left;
+					width: 30%;
+				}
+				aside {
+					float: right;
+					width: 70%;
+				}
+			}
+		}
+		&.archives {
+			background: #eee;
+
+			.post {
+				@include grid-column(4);
+			}
+		}
+	}
+
+	// Universal footer styling
+	&.footer {
+		background: white;
+	}
+
 }
