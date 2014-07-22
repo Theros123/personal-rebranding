@@ -1,0 +1,30 @@
+// Project
+
+// Mixin to control section background and color tint
+@mixin background($filename: none, $repeat: no-repeat, $bgsize: cover, $bgcolor: none, $bgattachment: scroll) {
+    background: transparent url(#{$filename}) $repeat;
+    background-size: $bgsize;
+    background-attachment: $bgattachment;
+
+  .tint-wrapper {
+    height: 100%;
+    // Make this variable
+    background-color:$bgcolor;
+  }
+}
+
+// Mixin for calc function
+@mixin calc($property, $expression) {
+  // Default fallback value
+  #{$property}: 100%;
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+// Mixin for multi column support
+@mixin columns($number) {
+  column-count:$number;
+  -moz-column-count:$number; /* Firefox */
+  -webkit-column-count:$number; /* Safari and Chrome */
+}
