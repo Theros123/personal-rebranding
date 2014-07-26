@@ -1,5 +1,6 @@
 @import "app";
 @import "_mixins";
+@import "_custom-settings";
 
 // Hero Section Styling
 
@@ -8,15 +9,14 @@
 	height: 100%;
 	width: 100%;
 	// Fall back to prevent clipping when browser height is too small
-	min-height: 500px;
+	// Need to have this value change for responsive
+	min-height: 600px;
 
 	@media #{$small-only} {
 		min-height: inherit;
 	}
-	@media #{$xlarge-up} {
-		height: 768px;
-	}
 
+	@include responsive();
 }
 
 .hero-wrapper {
@@ -35,12 +35,39 @@
 		@include calc(height, "100% - 150px");
 		overflow: hidden;
 
+		@media #{$small-only} {
+			height: auto;
+		}
+
 		.hero-content {
+			@include hero-image-content();
+
 			img {
-				@include grid-column(7);
+				padding-top: 1em;
 			}
 			.text {
-				@include grid-column(5);
+				padding-top: 6em;
+
+				h1 {
+					line-height: 1.3;
+					margin: 0;
+				}
+				h4 {
+					margin-bottom: 0;
+					line-height: 1;
+				}
+				
+				ul.nav {
+					@include grid-row();
+					list-style: none;
+					// Overwriting default margins
+					margin: 0;
+
+					li {
+						@include grid-column(6);
+						padding: 0;
+					}
+				}
 			}
 		}
 	}
@@ -79,31 +106,66 @@
 			background: #e06666;
 			height: 150px;
 			overflow: hidden;
+			
+			padding-top: 2em;
+			p {
+				line-height: 1;
+				margin: 0;
+				color: white;
+			}
+			a {
+				color: white;
+			}
+
+			.content {
+				padding: 0;
+			}
 
 			.thoughts {
 				@include grid-column(7);
 			}
 			.currently-reading {
 				@include grid-column(5);
-
-				height: 100%;
 				
 				// Make this better, add scalable styling
 				img {
 					float: left;
-					width: 30%;
+					width: 20%;
+					margin-top: -.7em;
 				}
 				aside {
+					padding-left: 1em;
 					float: right;
-					width: 70%;
+					width: 80%;
 				}
 			}
 		}
 		&.archives {
 			background: #eee;
 
+			.content {
+				padding: 2em 0;
+			}
+
+			h2, p {
+				// To force elements to line up correctly
+				padding: 0 0.9375rem;
+			}
+			p {
+				padding-top: 1em;
+				margin: 0;
+			}
+
 			.post {
 				@include grid-column(4);
+
+				padding-top: 1em;
+
+				p {
+					padding: 0;
+					margin: 0;
+					line-height: 1;
+				}
 			}
 		}
 	}
@@ -147,7 +209,7 @@
 		}
 		.text {
 			.column {
-				@include grid-column(6);
+				@include columns(2);
 			}
 		}
 		.image-slider {
@@ -169,6 +231,14 @@
 	// Universal footer styling
 	&.footer {
 		background: white;
+
+		.content {
+			padding: 1em 0.9375rem;
+
+			h3 {
+				margin: 0;
+			}
+		}
 
 		&.writing {
 			.content {
