@@ -1,0 +1,29 @@
+// Basic SASS Column Styling
+.content {
+	@include grid-column(12);
+}
+
+.image-slider {
+	@extend %content-section-styling;
+	padding: 0;
+	margin: 2em 0 0;
+	background: $lightGrey;
+
+	// If section is first/last, use alternate padding values
+	&.first {
+		padding-top: $sectionPadding;
+	}
+	&.last {
+		padding-bottom: $sectionPadding;
+	}
+	
+	.orbit-slides-container {
+		// Force slider to be specific height
+		height: 500px;
+		overflow: hidden;
+
+		li {
+			height: 500px;
+		}
+	}
+}

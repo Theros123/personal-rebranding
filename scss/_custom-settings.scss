@@ -17,7 +17,9 @@ h1 {
 	font-size: 3.5em;
 	line-height: 1.1;
 }
-h2 {}
+h2 {
+	font-size: 2em;
+}
 h3 {
 	font-size: 1.3em;
 }
@@ -31,6 +33,7 @@ p {
 // Color Settings
 
 $white: white;
+$lightGrey: #eee;
 $grey: #777;
 $black: #333;
 $blue: #00A0B0;
@@ -51,5 +54,6 @@ a {
 // Padding and Margin settings
 
 $sectionPadding: 3em;
+$writingSectionPadding: 2em;
 $sectionColumnGutter: 0.9375rem;
 $sectionListPadding: 1em;

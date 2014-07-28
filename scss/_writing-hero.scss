@@ -1,0 +1,41 @@
+// Basic SASS Column Styling
+.content {
+	@include grid-column(12);
+}
+
+.back {
+	@extend %nav-back;
+}
+
+.hero-wrapper {
+	height: 350px;
+
+	// Needed to position back arrow nav
+	position: relative;
+
+	.content-row {
+		position: relative;
+		height: 100%;
+
+		.content {
+			position: absolute;
+			bottom: 10%;
+
+			.text {
+				width: 70%;
+				
+				h1, p {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+// Writing Background Styling
+
+&.writing-title-example {
+	.hero-wrapper {
+		@include background($filename: '../images/1.jpg', $bgcolor: rgba($grey,.5), $bgattachment: fixed);
+	}
+}

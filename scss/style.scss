@@ -20,49 +20,9 @@
 }
 
 #writing {
+	@import "_writing-hero";
 	@import "_writing-footer";
-}
-
-.hero-wrapper {
-
-	&.writing {
-		height: 300px;
-		@include background($filename: '../images/walk.png');
-	}
-
-}
-
-// Content Section Styling
-
-.content-section {
-
-	&.writing {
-		.blockquote {
-			.text {
-				@include grid-column(7);
-			}
-			.quote {
-				@include grid-column(5);
-			}
-		}
-		.text {
-			.column {
-				@include columns(2);
-			}
-		}
-		.image-slider {
-			&.tint-wrapper {
-				background: #eee;
-			}
-			.orbit-slides-container {
-				// Force slider to be specific height
-				height: 500px;
-				overflow: hidden;
-
-				li {
-					height: 500px;
-				}
-			}
-		}
-	}
+	@import "_writing-blockquote";
+	@import "_writing-text";
+	@import "_writing-image-slider";
 }

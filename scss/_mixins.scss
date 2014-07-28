@@ -28,20 +28,8 @@
 
 // Extends for section layout
 
-%content-row {
-  @include grid-row();
-
-  .content {
-    @include grid-column(12);
-  }
-}
 %content-section-styling {
     padding: $sectionPadding 0;
-         
-    h2, h3 {
-      // To force elements to line up correctly
-      padding: 0 $sectionColumnGutter;
-    }
 }
 %content-section-columns {
   padding-top: $sectionListPadding;
@@ -58,7 +46,7 @@
 %nav-back {
   a {
     position: absolute;
-    top: 5%;
+    top: 1.5em;
     background: $grey;
     padding: .5em 1em;
     color: $white;
