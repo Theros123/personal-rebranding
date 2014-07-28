@@ -28,3 +28,20 @@ p {
 }
 
 // Color Settings
+
+$white: white;
+$black: #333;
+$blue: #00A0B0;
+$red: #CC333F;
+
+// Link settings
+
+a {
+	color: $blue;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		color: darken($blue, 10%);
+	}
+}
