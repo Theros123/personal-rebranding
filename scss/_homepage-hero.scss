@@ -1,8 +1,8 @@
 // Homepage hero section styling
 
 // Basic SASS Column Styling
-.content-row {
-	@extend %content-row;
+.content {
+	@include grid-column(12);
 }
 
 // Parent to force browser height and width for calc to work
@@ -27,6 +27,7 @@
 
 			img {
 				padding-top: 1em;
+				padding-left: $sectionColumnGutter; 
 			}
 		}
 		.text {

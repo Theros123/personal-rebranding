@@ -1,11 +1,11 @@
 // Basic SASS Column Styling
-.content-row {
-	@extend %content-row;
+.content {
+	@include grid-column(12);
 }
 
 .skills {
 	@extend %content-section-styling;
-	background: #e06666;
+	background: $red;
 	
 	h3 {
 		color: $white;

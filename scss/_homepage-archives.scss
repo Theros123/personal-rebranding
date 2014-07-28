@@ -1,19 +1,14 @@
 // Basic SASS Column Styling
-.content-row {
-	@extend %content-row;
+.content {
+	@include grid-column(12);
 }
 
 .archives {
 	@extend %content-section-styling;
-	background: #eee;
+	background: $lightGrey;
 
-	.content {
-		// Overwriting extra default padding
-		padding: 0;
-	}
-
-	p.last {
-		padding: $sectionPadding $sectionColumnGutter 0;
+	p:last-child {
+		padding: $writingSectionPadding 0 0;
 		margin: 0;
 		font-style: italic;
 	}

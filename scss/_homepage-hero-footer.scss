@@ -1,3 +1,8 @@
+// Basic SASS Column Styling
+.content {
+	@include grid-column(12);
+}
+
 .hero-footer {
 	background: $red;
 	height: 150px;
@@ -11,10 +16,6 @@
 	}
 	a {
 		color: white;
-	}
-
-	.content {
-		padding: 0;
 	}
 
 	.thoughts {

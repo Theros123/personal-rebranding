@@ -1,11 +1,11 @@
 // Basic SASS Column Styling
-.content-row {
-	@extend %content-row;
+.content {
+	@include grid-column(12);
 }
 
 .companies {
 	@extend %content-section-styling;
-	background: #eee;
+	background: $lightGrey;
 		
 	.column {
 		@include grid-column(2);
