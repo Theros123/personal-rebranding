@@ -1,0 +1,17 @@
+// Basic SASS Column Styling
+.content-row {
+	@extend %content-row;
+}
+
+.short-bio {
+	.image-wrapper {
+		@include grid-column(5);
+		padding-top: 1.5em;
+		max-height: 300px;
+		overflow: hidden;
+	}
+	.text {
+		@include grid-column(7);
+		padding-top: 5em;
+	}
+}

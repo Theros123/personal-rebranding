@@ -1,99 +1,29 @@
+// Universal Project Imports
 @import "app";
-@import "_mixins";
 @import "_custom-settings";
+@import "_mixins";
 
-// Hero Section Styling
+// Per Page Imports
+#homepage {
+	@import "_homepage-hero";
+	@import "_homepage-hero-footer";
+	@import "_homepage-archives";
+	@import "_homepage-footer";
+}
 
-.hero-overflow {
-	
-	height: 100%;
-	width: 100%;
-	// Fall back to prevent clipping when browser height is too small
-	// Need to have this value change for responsive
-	min-height: 600px;
+#about {
+	@import "_about-hero";
+	@import "_about-bio";
+	@import "_about-skills";
+	@import "_about-companies";
+	@import "_about-footer";
+}
 
-	@media #{$small-only} {
-		min-height: inherit;
-	}
-
-	@include responsive();
+#writing {
+	@import "_writing-footer";
 }
 
 .hero-wrapper {
-	
-	// SASS Foundation Columns
-	.hero-row {
-		@include grid-row();
-
-		.hero-content {
-			@include grid-column(12);
-		}
-	}
-
-	&.homepage {
-		// Need double quotes and spacing between numbers
-		@include calc(height, "100% - 150px");
-		overflow: hidden;
-
-		@media #{$small-only} {
-			height: auto;
-		}
-
-		.hero-content {
-			@include hero-image-content();
-
-			img {
-				padding-top: 1em;
-			}
-			.text {
-				padding-top: 5em;
-
-				h1 {
-					line-height: 1.2;
-					margin: 0;
-					color: $black;
-				}
-				h3 {
-					color: $black;
-				}
-				h4 {
-					margin-bottom: 0;
-					line-height: 1;
-					color: $black;
-				}
-				
-				ul.nav {
-					@include grid-row();
-					list-style: none;
-					// Overwriting default margins
-					margin: 0;
-					padding-top: 2em;
-
-					li {
-						@include grid-column(6);
-						padding: 0;
-					}
-					i {
-						text-align: left;
-						float: left;
-						color: $blue;
-					}
-					p {
-						margin-top: -5px;
-					}
-				}
-			}
-		}
-	}
-
-	&.about {
-		// Need double quotes and spacing between numbers
-		@include calc(height, "100% - 60px");
-		@include background($filename: '../images/walk.png', $bgattachment: fixed);
-
-		// Fall back to prevent clipping when browser height is too small
-		min-height: 450px;
-	}
 
 	&.writing {
 		height: 300px;
@@ -105,114 +35,6 @@
 // Content Section Styling
 
 .content-section {
-
-	// SASS Foundation Columns
-	.content-row {
-		@include grid-row();
-
-		.content {
-			@include grid-column(12);
-		}
-	}
-
-	&.homepage {
-		&.hero-footer {
-			background: $red;
-			height: 150px;
-			overflow: hidden;
-			
-			padding-top: 2em;
-			p {
-				line-height: 1;
-				margin: 0;
-				color: white;
-			}
-			a {
-				color: white;
-			}
-
-			.content {
-				padding: 0;
-			}
-
-			.thoughts {
-				@include grid-column(7);
-			}
-			.currently-reading {
-				@include grid-column(5);
-				
-				// Make this better, add scalable styling
-				img {
-					float: left;
-					width: 20%;
-					margin-top: -15px;
-				}
-				aside {
-					padding-left: 1em;
-					float: right;
-					width: 80%;
-				}
-			}
-		}
-		&.archives {
-			background: #eee;
-
-			.content {
-				padding: 2em 0;
-			}
-
-			h2, p {
-				// To force elements to line up correctly
-				padding: 0 0.9375rem;
-			}
-			p {
-				padding-top: 1em;
-				margin: 0;
-				font-style: italic;
-			}
-
-			.post {
-				@include grid-column(4);
-
-				padding-top: 1em;
-
-				p {
-					padding: 0;
-					margin: 0;
-					line-height: 1;
-					font-style: inherit;
-				}
-			}
-		}
-	}
-
-	&.about {
-		&.short-bio {
-			img {
-				@include grid-column(5);
-				
-				// To allow slight overlap over hero section
-				margin-top: -30px;
-			}
-			.text {
-				@include grid-column(7);
-			}
-		}
-		&.skills {
-			background: #e06666;
-
-			.column {
-				@include grid-column(4);
-			}
-		}
-		&.companies {
-			background: #eee;
-
-			.column {
-				@include grid-column(2);
-			}
-		}
-	}
 
 	&.writing {
 		.blockquote {
@@ -243,24 +65,4 @@
 			}
 		}
 	}
-
-	// Universal footer styling
-	&.footer {
-		background: white;
-
-		.content {
-			padding: 1em 0.9375rem;
-
-			h3 {
-				margin: 0;
-			}
-		}
-
-		&.writing {
-			.content {
-				border-top: 1px solid grey;
-			}
-		}
-	}
-
 }

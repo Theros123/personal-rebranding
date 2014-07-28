@@ -1,0 +1,41 @@
+// Basic SASS Column Styling
+.content-row {
+	@extend %content-row;
+}
+
+.back {
+	@extend %nav-back;
+}
+
+.hero-wrapper {
+	// Need double quotes and spacing between numbers
+	@include calc(height, "100% - 60px");
+	@include background($filename: '../images/walk.png', $bgcolor: rgba($grey,.5), $bgattachment: fixed);
+
+	// Fall back to prevent clipping when browser height is too small
+	min-height: 450px;
+
+	// Needed to position back arrow nav
+	position: relative;
+
+	.content-row {
+		position: relative;
+		height: 100%;
+
+		.content {
+			position: absolute;
+			bottom: 10%;
+
+			.text {
+				width: 70%;
+				
+				h1, p {
+					color: $white;
+				}
+				h1 {
+					line-height: 1.1;
+				}
+			}
+		}
+	}
+}

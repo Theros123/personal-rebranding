@@ -1,0 +1,38 @@
+.hero-footer {
+	background: $red;
+	height: 150px;
+	overflow: hidden;
+	
+	padding-top: 2em;
+	p {
+		line-height: 1;
+		margin: 0;
+		color: white;
+	}
+	a {
+		color: white;
+	}
+
+	.content {
+		padding: 0;
+	}
+
+	.thoughts {
+		@include grid-column(7);
+	}
+	.currently-reading {
+		@include grid-column(5);
+		
+		// Make this better, add scalable styling
+		img {
+			float: left;
+			width: 20%;
+			margin-top: -15px;
+		}
+		aside {
+			padding-left: 1em;
+			float: right;
+			width: 80%;
+		}
+	}
+}

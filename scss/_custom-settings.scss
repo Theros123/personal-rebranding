@@ -15,6 +15,7 @@ h3, h4, p {
 }
 h1 {
 	font-size: 3.5em;
+	line-height: 1.1;
 }
 h2 {}
 h3 {
@@ -30,6 +31,7 @@ p {
 // Color Settings
 
 $white: white;
+$grey: #777;
 $black: #333;
 $blue: #00A0B0;
 $red: #CC333F;
@@ -45,3 +47,9 @@ a {
 		color: darken($blue, 10%);
 	}
 }
+
+// Padding and Margin settings
+
+$sectionPadding: 3em;
+$sectionColumnGutter: 0.9375rem;
+$sectionListPadding: 1em;

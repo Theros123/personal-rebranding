@@ -1,0 +1,13 @@
+// Basic SASS Column Styling
+.content-row {
+	@extend %content-row;
+}
+
+#footer {
+	@extend %footer;
+	
+	h3 {
+		border-top: 1px solid grey;
+		padding-top: 1em;
+	}
+}

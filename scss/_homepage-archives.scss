@@ -1,0 +1,34 @@
+// Basic SASS Column Styling
+.content-row {
+	@extend %content-row;
+}
+
+.archives {
+	@extend %content-section-styling;
+	background: #eee;
+
+	.content {
+		// Overwriting extra default padding
+		padding: 0;
+	}
+
+	p.last {
+		padding: $sectionPadding $sectionColumnGutter 0;
+		margin: 0;
+		font-style: italic;
+	}
+
+	.column {
+		@include grid-column(4);
+		@extend %content-section-columns;
+
+		p {
+			padding: 0;
+			margin: 0;
+			line-height: 1;
+		}
+		h4 {
+			margin: .5em 0 0;
+		}
+	}
+}

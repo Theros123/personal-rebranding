@@ -1,0 +1,8 @@
+// Basic SASS Column Styling
+.content-row {
+	@extend %content-row;
+}
+
+#footer {
+	@extend %footer;
+}

@@ -1,3 +1,6 @@
+@import "app";
+@import "_custom-settings";
+
 // Project Mixins
 
 // Mixins for media queries
@@ -14,19 +17,73 @@
 
 // Mixins for section layout
 
-@mixin hero-image-content($column1: 7, $column2: 5) {
-  img {
+@mixin content-columns($column1: 7, $column2: 5) {
+  .column-one {
     @include grid-column($column1);
+  }
+  .column-two {
+    @include grid-column($column2);
+  }
+}
 
-    @media #{$small-only} {
-      width: 100%
+// Extends for section layout
+
+%content-row {
+  @include grid-row();
+
+  .content {
+    @include grid-column(12);
+  }
+}
+%content-section-styling {
+    padding: $sectionPadding 0;
+         
+    h2, h3 {
+      // To force elements to line up correctly
+      padding: 0 $sectionColumnGutter;
+    }
+}
+%content-section-columns {
+  padding-top: $sectionListPadding;
+
+  i {
+    text-align: left;
+    float: left;
+  }
+  p {
+    margin-top: -5px;
+    margin-bottom: 0;
+  }
+}
+%nav-back {
+  a {
+    position: absolute;
+    top: 5%;
+    background: $grey;
+    padding: .5em 1em;
+    color: $white;
+
+    &:hover {
+      background: darken($grey, 10%);
+      text-decoration: none;
+    }
+    p {
+      margin: 0;
+    }
+    i {
+      padding-right: 5px;
     }
   }
-  .text {
-    @include grid-column($column2);
+}
+// Universal footer styling
+%footer {
+  background: white;
 
-    @media #{$small-only} {
-      width: 100%;
+  .content {
+    padding: 1em $sectionColumnGutter;
+
+    h3 {
+      margin: 0;
     }
   }
 }
@@ -53,7 +110,7 @@
   #{$property}: calc(#{$expression});
 }
 
-// Mixin for multi column support
+// Mixin for CSS multi column support
 @mixin columns($number) {
   column-count:$number;
   -moz-column-count:$number; /* Firefox */

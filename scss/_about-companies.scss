@@ -1,0 +1,14 @@
+// Basic SASS Column Styling
+.content-row {
+	@extend %content-row;
+}
+
+.companies {
+	@extend %content-section-styling;
+	background: #eee;
+		
+	.column {
+		@include grid-column(2);
+		@extend %content-section-columns;
+	}
+} 

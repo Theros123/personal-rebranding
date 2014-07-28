@@ -1,0 +1,61 @@
+// Homepage hero section styling
+
+// Basic SASS Column Styling
+.content-row {
+	@extend %content-row;
+}
+
+// Parent to force browser height and width for calc to work
+.hero-overflow {	
+	height: 100%;
+	width: 100%;
+	// Fall back to prevent clipping when browser height is too small
+	// Need to have this value change for responsive
+	min-height: 600px;
+}
+
+// Element that calc is being called upon
+.hero-wrapper {
+	// Need double quotes and spacing between numbers
+	@include calc(height, "100% - 150px");
+	overflow: hidden;
+
+	.row {
+		.image-wrapper {
+			@include grid-column(7);
+			padding: 0;
+
+			img {
+				padding-top: 1em;
+			}
+		}
+		.text {
+			@include grid-column(5);
+			padding-top: 5em;
+
+			h1, h3, h4 {
+				color: $black;
+			}
+			h1 {
+				margin: 0;
+			}
+			h4 {
+				margin-bottom: 0;
+				line-height: 1;
+			}
+			
+			ul.nav {
+				@include grid-row();
+				@extend %content-section-columns;
+				list-style: none;
+				// Overwriting default margins
+				margin: 0;
+
+				li {
+					@include grid-column(6);
+					padding: 0;
+				}
+			}
+		}
+	}
+}
