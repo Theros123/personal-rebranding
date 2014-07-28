@@ -1,6 +1,6 @@
 // Basic SASS Column Styling
-.content-row {
-	@extend %content-row;
+.content {
+	@include grid-column(12);
 }
 
 .short-bio {
