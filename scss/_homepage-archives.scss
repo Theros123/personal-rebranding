@@ -14,9 +14,15 @@
 	}
 
 	.column {
-		@include grid-column(4);
-		@extend %content-section-columns;
-
+		@include grid-column(6);
+		padding-top: $sectionPadding/2;
+		min-height: 100px;
+		
+		@media #{$medium-up} {
+			@include grid-column(4);
+			padding-top: $sectionListPadding;
+			min-height: inherit;
+		}
 		p {
 			padding: 0;
 			margin: 0;

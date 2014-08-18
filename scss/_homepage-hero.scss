@@ -6,12 +6,19 @@
 }
 
 // Parent to force browser height and width for calc to work
-.hero-overflow {	
-	height: 100%;
-	width: 100%;
-	// Fall back to prevent clipping when browser height is too small
-	// Need to have this value change for responsive
-	min-height: 600px;
+.hero-overflow {
+	min-height: 200px;
+
+	@media #{$medium-up} { 	
+		// Fall back to prevent clipping when browser height is too small
+		// Need to have this value change for responsive
+		min-height: 300px;
+	}
+	@media #{$large-up} {
+		height: 100%;
+		width: 100%;
+		min-height: 600px;
+	}
 }
 
 // Element that calc is being called upon
@@ -22,17 +29,51 @@
 
 	.row {
 		.image-wrapper {
-			@include grid-column(7);
-			padding: 0;
+			@include grid-column(0);
+			display: none;
+				
+			@media #{$medium-up} { 
+				@include grid-column(6);
+				padding: 0;
+				display: inherit;			
+			}
+
+			@media #{$large-up} { 
+				@include grid-column(7);
+			}
 
 			img {
-				padding-top: 1em;
-				padding-left: $sectionColumnGutter; 
+				padding: 1em 4.5em 0; 
+
+				@media #{$medium-up} {
+					padding: 3em 1.5em 0 1.5em;
+				}
+				@media #{$large-up} {
+					padding: 1em 0 0;
+				}
+			}
+
+			&.mobile-column {
+				@include grid-column(12);
+				display: block;
+
+				@media #{$medium-up} {
+					display: none;
+				}
 			}
 		}
 		.text {
-			@include grid-column(5);
-			padding-top: 5em;
+			@include grid-column(12);
+			padding: $sectionPadding/2 $sectionColumnGutter 0;
+
+			@media #{$medium-up} { 
+				@include grid-column(6);
+				padding-top: 7%;
+			}
+			@media #{$large-up} {
+				@include grid-column(5);
+				padding-top: 5em;
+			}
 
 			h1, h3, h4 {
 				color: $black;
@@ -54,7 +95,12 @@
 
 				li {
 					@include grid-column(6);
-					padding: 0;
+					padding: 0 .5em 0 0;
+
+					i {
+						// To force text to the right of icon always
+						padding-bottom: 1em;
+					}
 				}
 			}
 		}

@@ -5,10 +5,15 @@
 
 .hero-footer {
 	background: $red;
-	height: 150px;
+	height: auto;
 	overflow: hidden;
+	padding: 2em 0;
+
+	@media #{$medium-up} {
+		height: 150px;
+		padding: 2em 0 0;
+	}
 	
-	padding-top: 2em;
 	p {
 		line-height: 1;
 		margin: 0;
@@ -19,21 +24,40 @@
 	}
 
 	.thoughts {
-		@include grid-column(7);
+		@include grid-column(12);
+		padding-bottom: $sectionPadding/2;
+
+		@media #{$medium-up} {
+			@include grid-column(7);	
+		}
 	}
 	.currently-reading {
-		@include grid-column(5);
+		@include grid-column(12);
+
+		@media #{$medium-up} {
+			@include grid-column(5);
+		}
 		
 		// Make this better, add scalable styling
 		img {
 			float: left;
-			width: 20%;
-			margin-top: -15px;
+			width: 30%;
+
+			@media #{$medium-up} {
+				width: 20%;
+			}
+			@media #{$large-up} {
+				margin-top: -15px;
+			}
 		}
 		aside {
 			padding-left: 1em;
 			float: right;
-			width: 80%;
+			width: 70%;
+
+			@media #{$medium-up} {
+				width: 80%
+			}
 		}
 	}
 }
