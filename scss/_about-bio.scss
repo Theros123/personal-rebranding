@@ -5,13 +5,34 @@
 
 .short-bio {
 	.image-wrapper {
-		@include grid-column(5);
-		padding-top: 1.5em;
-		max-height: 300px;
-		overflow: hidden;
+		display: none;
+
+		@media #{$medium-up} {
+			@include grid-column(5);
+			padding-top: 1.5em;
+			max-height: 300px;
+			overflow: hidden;
+			display: inherit; 
+		}
+
+		&.mobile-column {
+			@include grid-column(12);
+			display: block;
+			margin: 0 auto;
+			padding: 0 $sectionPadding*2;
+
+			@media #{$medium-up} {
+				display: none;
+			}
+		}
 	}
 	.text {
-		@include grid-column(7);
-		padding-top: 5em;
+		@include grid-column(12);
+		padding-top: $sectionPadding;
+
+		@media #{$medium-up} {
+			@include grid-column(7);
+			padding-top: 5em;
+		}
 	}
 }

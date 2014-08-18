@@ -8790,37 +8790,41 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* line 47, ../scss/_mixins.scss */
-#about .back a, #writing .back a {
+/* line 46, ../scss/_mixins.scss */
+#about .back, #writing .back {
   position: absolute;
   top: 1.5em;
-  background: #777777;
-  padding: .5em 1em;
-  color: white;
+  z-index: 100;
 }
-/* line 54, ../scss/_mixins.scss */
+/* line 52, ../scss/_mixins.scss */
 #about .back a:hover, #writing .back a:hover {
-  background: #5e5e5e;
   text-decoration: none;
 }
-/* line 58, ../scss/_mixins.scss */
-#about .back a p, #writing .back a p {
+/* line 56, ../scss/_mixins.scss */
+#about .back p, #writing .back p {
+  color: white;
+  background: #777777;
+  padding: .5em 1em;
   margin: 0;
 }
-/* line 61, ../scss/_mixins.scss */
-#about .back a i, #writing .back a i {
+/* line 62, ../scss/_mixins.scss */
+#about .back p:hover, #writing .back p:hover {
+  background: #5e5e5e;
+}
+/* line 66, ../scss/_mixins.scss */
+#about .back i, #writing .back i {
   padding-right: 5px;
 }
 
-/* line 67, ../scss/_mixins.scss */
+/* line 71, ../scss/_mixins.scss */
 #homepage #footer, #about #footer, #writing #footer {
   background: white;
 }
-/* line 70, ../scss/_mixins.scss */
+/* line 74, ../scss/_mixins.scss */
 #homepage #footer .content, #about #footer .content, #writing #footer .content {
   padding: 1em 0.9375rem;
 }
-/* line 73, ../scss/_mixins.scss */
+/* line 77, ../scss/_mixins.scss */
 #homepage #footer .content h3, #about #footer .content h3, #writing #footer .content h3 {
   margin: 0;
 }
@@ -9156,7 +9160,7 @@ a:hover {
   min-height: 450px;
   position: relative;
 }
-/* line 85, ../scss/_mixins.scss */
+/* line 89, ../scss/_mixins.scss */
 #about .hero-wrapper .tint-wrapper {
   height: 100%;
   background-color: rgba(119, 119, 119, 0.5);
@@ -9173,9 +9177,15 @@ a:hover {
 }
 /* line 29, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text {
-  width: 70%;
+  width: 100%;
 }
-/* line 32, ../scss/_about-hero.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 29, ../scss/_about-hero.scss */
+  #about .hero-wrapper .row .content .text {
+    width: 70%;
+  }
+}
+/* line 36, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text h1, #about .hero-wrapper .row .content .text p {
   color: white;
 }
@@ -9188,21 +9198,54 @@ a:hover {
 }
 /* line 7, ../scss/_about-bio.scss */
 #about .short-bio .image-wrapper {
+  display: none;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 7, ../scss/_about-bio.scss */
+  #about .short-bio .image-wrapper {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 41.66667%;
+    float: left;
+    padding-top: 1.5em;
+    max-height: 300px;
+    overflow: hidden;
+    display: inherit;
+  }
+}
+/* line 18, ../scss/_about-bio.scss */
+#about .short-bio .image-wrapper.mobile-column {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 41.66667%;
+  width: 100%;
   float: left;
-  padding-top: 1.5em;
-  max-height: 300px;
-  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  padding: 0 6em;
 }
-/* line 13, ../scss/_about-bio.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 18, ../scss/_about-bio.scss */
+  #about .short-bio .image-wrapper.mobile-column {
+    display: none;
+  }
+}
+/* line 29, ../scss/_about-bio.scss */
 #about .short-bio .text {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 58.33333%;
+  width: 100%;
   float: left;
-  padding-top: 5em;
+  padding-top: 3em;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 29, ../scss/_about-bio.scss */
+  #about .short-bio .text {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 58.33333%;
+    float: left;
+    padding-top: 5em;
+  }
 }
 /* line 2, ../scss/_about-skills.scss */
 #about .content {
@@ -9223,10 +9266,28 @@ a:hover {
 #about .skills .column {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 33.33333%;
+  width: 100%;
   float: left;
 }
-/* line 18, ../scss/_about-skills.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 14, ../scss/_about-skills.scss */
+  #about .skills .column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 14, ../scss/_about-skills.scss */
+  #about .skills .column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+  }
+}
+/* line 25, ../scss/_about-skills.scss */
 #about .skills .column i, #about .skills .column p {
   color: white;
 }
@@ -9245,8 +9306,30 @@ a:hover {
 #about .companies .column {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 16.66667%;
+  width: 33.33333%;
   float: left;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 10, ../scss/_about-companies.scss */
+  #about .companies .column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 25%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 10, ../scss/_about-companies.scss */
+  #about .companies .column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 16.66667%;
+    float: left;
+  }
+}
+/* line 21, ../scss/_about-companies.scss */
+#about .companies .column img {
+  width: 100%;
 }
 /* line 2, ../scss/_about-footer.scss */
 #about .content {
@@ -9280,19 +9363,25 @@ a:hover {
 }
 /* line 24, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text {
-  width: 70%;
+  width: 100%;
 }
-/* line 27, ../scss/_writing-hero.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 24, ../scss/_writing-hero.scss */
+  #writing .hero-wrapper .row .content .text {
+    width: 70%;
+  }
+}
+/* line 31, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text h1, #writing .hero-wrapper .row .content .text p {
   color: white;
 }
-/* line 38, ../scss/_writing-hero.scss */
+/* line 42, ../scss/_writing-hero.scss */
 #writing.writing-title-example .hero-wrapper {
   background: transparent url(../images/1.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 85, ../scss/_mixins.scss */
+/* line 89, ../scss/_mixins.scss */
 #writing.writing-title-example .hero-wrapper .tint-wrapper {
   height: 100%;
   background-color: rgba(119, 119, 119, 0.5);

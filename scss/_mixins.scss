@@ -44,24 +44,28 @@
   }
 }
 %nav-back {
-  a {
-    position: absolute;
-    top: 1.5em;
-    background: $grey;
-    padding: .5em 1em;
-    color: $white;
+	position: absolute;
+	top: 1.5em;
+	z-index: 100;
 
-    &:hover {
-      background: darken($grey, 10%);
-      text-decoration: none;
-    }
-    p {
-      margin: 0;
-    }
-    i {
-      padding-right: 5px;
-    }
-  }
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	p {
+		color: $white;
+		background: $grey;
+		padding: .5em 1em;
+	 	margin: 0;
+
+ 		&:hover {
+			background: darken($grey, 10%);
+		}
+	}
+	i {
+	  	padding-right: 5px;
+	}
 }
 // Universal footer styling
 %footer {

@@ -22,7 +22,11 @@
 			bottom: 10%;
 
 			.text {
-				width: 70%;
+				width: 100%;
+
+				@media #{$medium-up} {
+					width: 70%;
+				}
 				
 				h1, p {
 					color: $white;
