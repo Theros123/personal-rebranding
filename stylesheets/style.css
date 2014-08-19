@@ -9421,21 +9421,41 @@ a:hover {
 #writing .blockquote .text {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 58.33333%;
+  width: 100%;
   float: left;
 }
-/* line 22, ../scss/_writing-blockquote.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 18, ../scss/_writing-blockquote.scss */
+  #writing .blockquote .text {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 58.33333%;
+    float: left;
+  }
+}
+/* line 26, ../scss/_writing-blockquote.scss */
 #writing .blockquote .text p:last-child {
   margin-bottom: 0;
 }
-/* line 26, ../scss/_writing-blockquote.scss */
+/* line 30, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 41.66667%;
+  width: 100%;
   float: left;
+  padding-top: 1.5em;
 }
-/* line 29, ../scss/_writing-blockquote.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 30, ../scss/_writing-blockquote.scss */
+  #writing .blockquote .quote {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 41.66667%;
+    float: left;
+    padding-top: 0;
+  }
+}
+/* line 39, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote blockquote {
   color: #00a0b0;
   font-size: 1.5em;
@@ -9463,11 +9483,21 @@ a:hover {
 }
 /* line 18, ../scss/_writing-text.scss */
 #writing .column-text .column {
-  column-count: 2;
-  -moz-column-count: 2;
+  column-count: 1;
+  -moz-column-count: 1;
   /* Firefox */
-  -webkit-column-count: 2;
+  -webkit-column-count: 1;
   /* Safari and Chrome */
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 18, ../scss/_writing-text.scss */
+  #writing .column-text .column {
+    column-count: 2;
+    -moz-column-count: 2;
+    /* Firefox */
+    -webkit-column-count: 2;
+    /* Safari and Chrome */
+  }
 }
 /* line 2, ../scss/_writing-image-slider.scss */
 #writing .content {
@@ -9500,27 +9530,54 @@ a:hover {
 }
 /* line 28, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container {
-  height: 500px;
+  height: 320px;
   overflow: hidden;
   position: relative;
 }
-/* line 34, ../scss/_writing-image-slider.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 28, ../scss/_writing-image-slider.scss */
+  #writing .image-slider .orbit-slides-container {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 28, ../scss/_writing-image-slider.scss */
+  #writing .image-slider .orbit-slides-container {
+    height: 500px;
+  }
+}
+/* line 41, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container li {
-  height: 500px;
-}
-/* line 37, ../scss/_writing-image-slider.scss */
-#writing .image-slider .orbit-slides-container li img {
-  position: absolute;
-  left: 0;
-  max-width: 75%;
-}
-/* line 42, ../scss/_writing-image-slider.scss */
-#writing .image-slider .orbit-slides-container li .orbit-caption {
-  right: 0;
   height: 100%;
-  width: 25%;
-  background: inherit;
-  color: #333333;
-  padding: 10em 2.5em 0 1.5em;
+}
+/* line 44, ../scss/_writing-image-slider.scss */
+#writing .image-slider .orbit-slides-container li img {
+  width: 100%;
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 44, ../scss/_writing-image-slider.scss */
+  #writing .image-slider .orbit-slides-container li img {
+    position: absolute;
+    left: 0;
+    max-width: 75%;
+  }
+}
+/* line 53, ../scss/_writing-image-slider.scss */
+#writing .image-slider .orbit-slides-container li .orbit-caption {
   font-size: 1em;
+  width: inherit;
+  height: auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1em 0.9375rem;
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 53, ../scss/_writing-image-slider.scss */
+  #writing .image-slider .orbit-slides-container li .orbit-caption {
+    right: 0;
+    height: 100%;
+    width: 25%;
+    background: inherit;
+    color: #333333;
+    padding: 10em 2.5em 0 1.5em;
+  }
 }

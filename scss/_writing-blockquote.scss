@@ -16,7 +16,11 @@
 	}
 	
 	.text {
-		@include grid-column(7);
+		@include grid-column(12);
+
+		@media #{$medium-up} {
+			@include grid-column(7);
+		}
 
 		// Elimate excess padding on last paragraph
 		p:last-child {
@@ -24,7 +28,13 @@
 		}
 	}
 	.quote {
-		@include grid-column(5);
+		@include grid-column(12);
+		padding-top: $sectionPadding/2;
+
+		@media #{$medium-up} {
+			@include grid-column(5);
+			padding-top: 0;
+		}
 
 		blockquote {
 			color: $blue;

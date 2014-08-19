@@ -16,6 +16,10 @@
 	}
 	
 	.column {
-		@include columns(2);
+		@include columns(1);
+
+		@media #{$medium-up} {
+			@include columns(2);
+		}
 	}
 }
