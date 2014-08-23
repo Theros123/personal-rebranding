@@ -21,5 +21,10 @@
 		@media #{$medium-up} {
 			@include columns(2);
 		}
+
+		p {
+			// Overwriting default padding
+			margin-bottom: 0;
+		}
 	}
 }

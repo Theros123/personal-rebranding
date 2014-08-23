@@ -9510,6 +9510,10 @@ a:hover {
     /* Safari and Chrome */
   }
 }
+/* line 25, ../scss/_writing-text.scss */
+#writing .column-text .column p {
+  margin-bottom: 0;
+}
 /* line 2, ../scss/_writing-image-slider.scss */
 #writing .content {
   padding-left: 0.9375rem;
@@ -9520,7 +9524,7 @@ a:hover {
 /* line 6, ../scss/_writing-image-slider.scss */
 #writing .image-slider {
   padding: 0;
-  margin: 2em 0 0;
+  margin: 3em 0 0;
   background: #eeeeee;
 }
 /* line 13, ../scss/_writing-image-slider.scss */
