@@ -1,4 +1,84 @@
-// Project
+@import "app";
+@import "_custom-settings";
+
+// Project Mixins
+
+// Mixins for media queries
+
+// Case 1 - Default scenarios
+@mixin responsive() {
+    @media #{$small-only} {
+      min-height: inherit;
+    }
+    @media #{$xlarge-up} {
+      height: 768px;
+  }
+}
+
+// Mixins for section layout
+
+@mixin content-columns($column1: 7, $column2: 5) {
+  .column-one {
+    @include grid-column($column1);
+  }
+  .column-two {
+    @include grid-column($column2);
+  }
+}
+
+// Extends for section layout
+
+%content-section-styling {
+    padding: $sectionPadding 0;
+}
+%content-section-columns {
+  padding-top: $sectionListPadding;
+
+  i {
+    text-align: left;
+    float: left;
+  }
+  p {
+    margin-top: -5px;
+    margin-bottom: 0;
+  }
+}
+%nav-back {
+	position: absolute;
+	top: 1.5em;
+	z-index: 100;
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	p {
+		color: $white;
+		background: $grey;
+		padding: .5em 1em;
+	 	margin: 0;
+
+ 		&:hover {
+			background: darken($grey, 10%);
+		}
+	}
+	i {
+	  	padding-right: 5px;
+	}
+}
+// Universal footer styling
+%footer {
+  background: white;
+
+  .content {
+    padding: 1em $sectionColumnGutter;
+
+    h3 {
+      margin: 0;
+    }
+  }
+}
 
 // Mixin to control section background and color tint
 @mixin background($filename: none, $repeat: no-repeat, $bgsize: cover, $bgcolor: none, $bgattachment: scroll) {
@@ -22,9 +102,28 @@
   #{$property}: calc(#{$expression});
 }
 
-// Mixin for multi column support
+// Mixin for CSS multi column support
 @mixin columns($number) {
   column-count:$number;
   -moz-column-count:$number; /* Firefox */
   -webkit-column-count:$number; /* Safari and Chrome */
+}
+
+// Mixins for Font Awesome Rotation
+@mixin fa-icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+     -moz-transform: rotate($degrees);
+      -ms-transform: rotate($degrees);
+       -o-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+@mixin fa-icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+     -moz-transform: scale($horiz, $vert);
+      -ms-transform: scale($horiz, $vert);
+       -o-transform: scale($horiz, $vert);
+          transform: scale($horiz, $vert);
 }

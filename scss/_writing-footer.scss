@@ -1,0 +1,13 @@
+// Basic SASS Column Styling
+.content {
+	@include grid-column(12);
+}
+
+#footer {
+	@extend %footer;
+	
+	h3 {
+		border-top: 1px solid grey;
+		padding-top: 1em;
+	}
+}

@@ -1,0 +1,24 @@
+// Basic SASS Column Styling
+.content {
+	@include grid-column(12);
+}
+
+.companies {
+	@extend %content-section-styling;
+	background: $lightGrey;
+		
+	.column {
+		@include grid-column(4);
+		@extend %content-section-columns;
+
+		@media #{$medium-up} {
+			@include grid-column(3);
+		}
+		@media #{$large-up} {
+			@include grid-column(2);
+		}
+
+		img {
+			width: 100%;		}
+	}
+} 

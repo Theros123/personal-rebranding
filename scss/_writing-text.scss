@@ -1,0 +1,30 @@
+// Basic SASS Column Styling
+.content {
+	@include grid-column(12);
+}
+
+.column-text {
+	@extend %content-section-styling;
+	padding: $writingSectionPadding 0 0;
+
+	// If section is first/last, use alternate padding values
+	&.first {
+		padding-top: $sectionPadding;
+	}
+	&.last {
+		padding-bottom: $sectionPadding;
+	}
+	
+	.column {
+		@include columns(1);
+
+		@media #{$medium-up} {
+			@include columns(2);
+		}
+
+		p {
+			// Overwriting default padding
+			margin-bottom: 0;
+		}
+	}
+}

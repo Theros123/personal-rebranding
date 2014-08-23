@@ -1,0 +1,29 @@
+// Basic SASS Column Styling
+.content {
+	@include grid-column(12);
+}
+
+.skills {
+	@extend %content-section-styling;
+	background: $red;
+	
+	h3 {
+		color: $white;
+	}
+
+	.column {
+		@include grid-column(12);
+		@extend %content-section-columns;
+
+		@media #{$medium-up} {
+			@include grid-column(6);
+		}
+		@media #{$large-up} {
+			@include grid-column(4);
+		}
+
+		i, p {
+			color: $white;
+		}
+	}
+} 

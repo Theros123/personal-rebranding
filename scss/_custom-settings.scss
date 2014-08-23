@@ -1,0 +1,75 @@
+// Custom Universal Settings
+
+// Font styling
+
+@font-face {
+  font-family: 'myriad-pro';
+  src: url('../fonts/MYRIADPRO-REGULAR.woff') format('woff') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+h1, h2 {
+	font-family: 'myriad-pro', tahoma, verdana, sans-serif;
+}
+h3, h4, p {
+	font-family: tahoma, verdana, sans-serif;
+}
+h1 {
+	font-size: 2.5em;
+	line-height: 1.1;
+
+	@media #{$large-up} {
+		font-size: 3.5em;
+	}
+}
+h2 {
+	font-size: 1.5em;
+	
+	@media #{$large-up} {
+		font-size: 2em;
+	}
+}
+h3 {
+	font-size: 1.2em;
+
+	@media #{$large-up} {
+		font-size: 1.3em;
+	}
+}
+h4 {
+	font-size: 1.1em;
+
+	@media #{$large-up} {
+		font-size: 1.1em;
+	}
+}
+p {
+	font-size: 1em;
+}
+
+// Color Settings
+
+$white: white;
+$lightGrey: #eee;
+$grey: #777;
+$black: #333;
+$blue: #00A0B0;
+$red: #CC333F;
+
+// Link settings
+
+a {
+	color: $blue;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		color: darken($blue, 10%);
+	}
+}
+
+// Padding and Margin settings
+
+$sectionPadding: 3em;
+$writingSectionPadding: 2em;
+$sectionColumnGutter: 0.9375rem;
+$sectionListPadding: 1em;

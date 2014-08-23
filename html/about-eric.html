@@ -6,19 +6,20 @@
 		<title>About Eric Huang</title>
 		<link rel="stylesheet" href="../stylesheets/app.css" />
 		<link rel="stylesheet" href="../stylesheets/style.css">
-		<script src="bower_components/modernizr/modernizr.js"></script>
+		<link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+		<script src="../bower_components/modernizr/modernizr.js"></script>
 	</head>
   
-	<body>
+	<body id="about">
 		
-		<section class="hero-wrapper about">
-			<aside class="nav">
-				<p><a href="#">Go back home</a></p>
+		<section class="hero-wrapper">
+			<aside class="nav back">
+				<a href="index.html"><p><i class="fa fa-reply"></i> Go back home</p></a>
 			</aside>
 			<div class="tint-wrapper">
 
-				<div class="hero-row">
-					<div class="hero-content">
+				<div class="row">
+					<div class="content">
 						<section class="text">
 							<h1>"Some famous quote that I believe highly in should go here"</h1>
 							<p>- Some dead guy said this</p>
@@ -29,40 +30,55 @@
 			</div>
 		</section>
 
-		<section class="content-section about short-bio">
+		<section class="content-section short-bio">
 				
-			<div class="content-row">
+			<div class="row">
 				<div class="content">
 					<div class="row">
-						<img src="../images/hero-homepage.png" alt="#">
+						<section class="image-wrapper">
+							<img src="../images/homepage/hero.png" alt="#">
+						</section>
 						<section class="column text">
 							<h3>Hey there! I'm <strong>Eric Huang</strong></h3>
 							<p>I'm a designer with <a href="#">iRule</a> based out of Detroit. When I'm not pushing pixels around on a screen, you can find me trying to plan a roadtrip (somewhere) or attempting (and failing) to find a video game with a great story.</p>
 						</section>
+						<section class="image-wrapper mobile-column">
+							<img src="../images/hero-homepage.png" alt="#">
+						</section>
 					</div>
 				</div>
 			</div>
 
 		</section>	
 
-		<section class="content-section about skills">
+		<section class="content-section skills">
 				
-			<div class="content-row">
+			<div class="row">
 				<div class="content">
+					<h3>Things I'm good at</h3>
 					<div class="row">
-						<h3>This is a sub-heading title, something a little longer</h3>
-						<section class="column">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</section>
-						<section class="column">
-							<p>Cras risus lectus, sodales a accumsan nec, lobortis ac lectus.</p>
-						</section>
-						<section class="column">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</section>
-						<section class="column">
-							<p>Cras risus lectus, sodales a accumsan nec, lobortis ac lectus.</p>
-						</section>
+						<div class="column-wrapper">
+							<section class="column">
+								<i class="fa fa-user fa-3x fa-fw"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</section>
+							<section class="column">
+								<i class="fa fa-user fa-3x fa-fw"></i>
+								<p>Cras risus lectus, sodales a accumsan nec, lobortis ac lectus.</p>
+							</section>
+							<section class="column">
+								<i class="fa fa-user fa-3x fa-fw"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</section>
+							<section class="column">
+								<i class="fa fa-user fa-3x fa-fw"></i>
+								<p>Cras risus lectus, sodales a accumsan nec, lobortis ac lectus.</p>
+							</section>
+							<section class="column">
+								<i class="fa fa-user fa-3x fa-fw"></i>
+								<p>Cras risus lectus, sodales a accumsan nec, lobortisasdf  ac lectus.</p>
+							</section>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -70,53 +86,59 @@
 		</section>	
 
 
-		<section class="content-section about companies">
+		<section class="content-section companies">
 				
-			<div class="content-row">
+			<div class="row">
 				<div class="content">
+					<h3>Companies that I've worked with</h3>
 					<div class="row">
-						<h3>Companies that I've worked with</h3>
-						<section class="column">
-							<img src="http://placehold.it/150x80" alt="#">
-						</section>
-						<section class="column">
-							<img src="http://placehold.it/150x80" alt="#">
-						</section>
-						<section class="column">
-							<img src="http://placehold.it/150x80" alt="#">
-						</section>
-						<section class="column">
-							<img src="http://placehold.it/150x80" alt="#">
-						</section>
-						<section class="column">
-							<img src="http://placehold.it/150x80" alt="#">
-						</section>
-						<section class="column">
-							<img src="http://placehold.it/150x80" alt="#">
-						</section>
-						<section class="column">
-							<img src="http://placehold.it/150x80" alt="#">
-						</section>
+						<div class="column-wrapper">
+							<section class="column">
+								<img src="http://placehold.it/150x80" alt="#">
+							</section>
+							<section class="column">
+								<img src="http://placehold.it/150x80" alt="#">
+							</section>
+							<section class="column">
+								<img src="http://placehold.it/150x80" alt="#">
+							</section>
+							<section class="column">
+								<img src="http://placehold.it/150x80" alt="#">
+							</section>
+							<section class="column">
+								<img src="http://placehold.it/150x80" alt="#">
+							</section>
+							<section class="column">
+								<img src="http://placehold.it/150x80" alt="#">
+							</section>
+							<section class="column">
+								<img src="http://placehold.it/150x80" alt="#">
+							</section>
+						</div>
 					</div>
 				</div>
 			</div>
 
 		</section>	
 
-		<section class="content-section footer">
+		<section id="footer" class="content-section">
 			<div class="tint-wrapper">
 				
-				<div class="content-row">
+				<div class="row">
 					<div class="content">
-						<h5>Let's talk about interesting things</h5>
+						<h3>Let's talk about interesting things 
+						<a href="#"><i class="fa fa-twitter-square"></i></a> 
+						<a href="#"><i class="fa fa-facebook-square"></i></a> 
+						<a href="#"><i class="fa fa-github"></i></a>
+						</h3>
 					</div>
 				</div>
 
 			</div>
 		</section>
 
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/foundation/js/foundation.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/foundation/js/foundation.min.js"></script>
+	<script src="../js/app.js"></script>
   </body>
 </html>

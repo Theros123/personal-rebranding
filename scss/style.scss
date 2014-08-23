@@ -1,180 +1,28 @@
+// Universal Project Imports
 @import "app";
+@import "_custom-settings";
 @import "_mixins";
 
-// Hero Section Styling
-
-.hero-overflow {
-	
-	height: 100%;
-	width: 100%;
-	// Fall back to prevent clipping when browser height is too small
-	min-height: 500px;
-
-	@media #{$small-only} {
-		min-height: inherit;
-	}
-	@media #{$xlarge-up} {
-		height: 768px;
-	}
-
+// Per Page Imports
+#homepage {
+	@import "_homepage-hero";
+	@import "_homepage-hero-footer";
+	@import "_homepage-archives";
+	@import "_homepage-footer";
 }
 
-.hero-wrapper {
-	
-	// SASS Foundation Columns
-	.hero-row {
-		@include grid-row();
-
-		.hero-content {
-			@include grid-column(12);
-		}
-	}
-
-	&.homepage {
-		// Need double quotes and spacing between numbers
-		@include calc(height, "100% - 150px");
-		overflow: hidden;
-
-		.hero-content {
-			img {
-				@include grid-column(7);
-			}
-			.text {
-				@include grid-column(5);
-			}
-		}
-	}
-
-	&.about {
-		// Need double quotes and spacing between numbers
-		@include calc(height, "100% - 60px");
-		@include background($filename: '../images/walk.png', $bgattachment: fixed);
-
-		// Fall back to prevent clipping when browser height is too small
-		min-height: 450px;
-	}
-
-	&.writing {
-		height: 300px;
-		@include background($filename: '../images/walk.png');
-	}
-
+#about {
+	@import "_about-hero";
+	@import "_about-bio";
+	@import "_about-skills";
+	@import "_about-companies";
+	@import "_about-footer";
 }
 
-// Content Section Styling
-
-.content-section {
-
-	// SASS Foundation Columns
-	.content-row {
-		@include grid-row();
-
-		.content {
-			@include grid-column(12);
-		}
-	}
-
-	&.homepage {
-		&.hero-footer {
-			background: #e06666;
-			height: 150px;
-			overflow: hidden;
-
-			.thoughts {
-				@include grid-column(7);
-			}
-			.currently-reading {
-				@include grid-column(5);
-
-				height: 100%;
-				
-				// Make this better, add scalable styling
-				img {
-					float: left;
-					width: 30%;
-				}
-				aside {
-					float: right;
-					width: 70%;
-				}
-			}
-		}
-		&.archives {
-			background: #eee;
-
-			.post {
-				@include grid-column(4);
-			}
-		}
-	}
-
-	&.about {
-		&.short-bio {
-			img {
-				@include grid-column(5);
-				
-				// To allow slight overlap over hero section
-				margin-top: -30px;
-			}
-			.text {
-				@include grid-column(7);
-			}
-		}
-		&.skills {
-			background: #e06666;
-
-			.column {
-				@include grid-column(4);
-			}
-		}
-		&.companies {
-			background: #eee;
-
-			.column {
-				@include grid-column(2);
-			}
-		}
-	}
-
-	&.writing {
-		.blockquote {
-			.text {
-				@include grid-column(7);
-			}
-			.quote {
-				@include grid-column(5);
-			}
-		}
-		.text {
-			.column {
-				@include grid-column(6);
-			}
-		}
-		.image-slider {
-			&.tint-wrapper {
-				background: #eee;
-			}
-			.orbit-slides-container {
-				// Force slider to be specific height
-				height: 500px;
-				overflow: hidden;
-
-				li {
-					height: 500px;
-				}
-			}
-		}
-	}
-
-	// Universal footer styling
-	&.footer {
-		background: white;
-
-		&.writing {
-			.content {
-				border-top: 1px solid grey;
-			}
-		}
-	}
-
+#writing {
+	@import "_writing-hero";
+	@import "_writing-footer";
+	@import "_writing-blockquote";
+	@import "_writing-text";
+	@import "_writing-image-slider";
 }

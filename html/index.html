@@ -6,28 +6,44 @@
 		<title>Foundation</title>
 		<link rel="stylesheet" href="../stylesheets/app.css" />
 		<link rel="stylesheet" href="../stylesheets/style.css">
-		<script src="bower_components/modernizr/modernizr.js"></script>
+		<link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+		<script src="../bower_components/modernizr/modernizr.js"></script>
 	</head>
   
-	<body>
+	<body id="homepage">
 		
 		<div class="hero-overflow">
-			<section class="hero-wrapper homepage">
+			<section class="hero-wrapper">
 				<div class="tint-wrapper">
 
-					<div class="hero-row">
-						<div class="hero-content">
+					<div class="row">
+						<div class="content">
 							<div class="row">
-								<img src="../images/hero-homepage.png" alt="#">
-								<section class="text">
-									<h3>Eric Huang is a</h3>
-									<h1>Dedicated Problem Solver</h1>
-									<h4>adventurous roadtripper, decent squash player, and lifelong learner.</h4>
+								<section class="image-wrapper column-one">
+									<img src="../images/homepage/hero.png" alt="#">
+								</section>
+								<section class="text column-two">
+									<h4>Eric Huang is a</h4>
+									<h1>Dedicated Problem Solver,</h1>
+									<h3>adventurous roadtripper, decent squash player, and lifelong learner.</h3>
 
-									<aside class="nav">
-										<li><a href="#">Find what what makes me tick</a></li>
-										<li><a href="#">Read my latest thoughts</a></li>
-									</aside>
+									<ul class="nav">
+										<li>
+											<a href="about-eric.html">
+											<i class="fa fa-database fa-2x fa-fw"></i>
+											<p>Find what what makes me tick</p>
+											</a>
+										</li>
+										<li>
+											<a href="writings/writing-example.html">
+											<i class="fa fa-user fa-2x fa-fw"></i>
+											<p>Read my latest thoughts</p>
+											</a>
+										</li>
+									</ul>
+								</section>
+								<section class="image-wrapper mobile-column">
+									<img src="../images/homepage/hero.png" alt="#">
 								</section>
 							</div>
 						</div>
@@ -36,18 +52,18 @@
 				</div>
 			</section>
 
-			<section class="content-section hero-footer homepage">
+			<section class="content-section hero-footer">
 				<div class="tint-wrapper">
 					
-					<div class="content-row">
+					<div class="row">
 						<div class="content">
 							<div class="row">
 								<section class="thoughts">
 									<p>Latest thoughts</p>
-									<h3><a href="#">A hospital nightmare as an analogy to Detroit</a></h3>
+									<h3><a href="writings/writing-example.html">A hospital nightmare as an analogy to Detroit</a></h3>
 								</section>
 								<section class="currently-reading">
-									<a href="#"><img src="../images/book.png" alt="#"></a>
+									<a href="#"><img src="../images/homepage/book.png" alt="#"></a>
 									<aside>
 										<p>Currently reading</p>
 										<h4><a href="#">The Great Game: On Secret Service on High Asia</a></h4>
@@ -61,26 +77,30 @@
 			</section>
 		</div>
 
-		<section class="content-section archives homepage">
+		<section class="content-section archives">
 			<div class="tint-wrapper">
 				
-				<div class="content-row">
+				<div class="row">
 					<div class="content">
 						<h2>Some things I wrote</h2>
 						<div class="row">
-							<section class="post">
+							<section class="column">
 								<p>January 5th, 2014</p>
 								<h4><a href="#">Why I got into entrepreneurship</a></h4>
 							</section>
-							<section class="post">
+							<section class="column">
 								<p>January 4th, 2014</p>
 								<h4><a href="#">Problem solving in a startup</a></h4>
 							</section>
-							<section class="post">
+							<section class="column">
 								<p>December 21st, 2013</p>
 								<h4><a href="#">Being Gluten-Free is a pain in the ass</a></h4>
 							</section>
-							<section class="post">
+							<section class="column">
+								<p>December 20th, 2013</p>
+								<h4><a href="#">Long longer title will go here</a></h4>
+							</section>
+							<section class="column">
 								<p>December 20th, 2013</p>
 								<h4><a href="#">Long longer title will go here</a></h4>
 							</section>
@@ -92,20 +112,24 @@
 			</div>
 		</section>
 
-		<section class="content-section footer">
+		<section id="footer" class="content-section">
 			<div class="tint-wrapper">
 				
-				<div class="content-row">
+				<div class="row">
 					<div class="content">
-						<h5>Let's talk about interesting things</h5>
+						<h3>Let's talk about interesting things 
+						<a href="#"><i class="fa fa-twitter-square"></i></a> 
+						<a href="#"><i class="fa fa-facebook-square"></i></a> 
+						<a href="#"><i class="fa fa-github"></i></a>
+						</h3>
 					</div>
 				</div>
 
 			</div>
 		</section>
 
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/foundation/js/foundation.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/foundation/js/foundation.min.js"></script>
+	<script src="../js/app.js"></script>
 	</body>
 </html>
