@@ -8781,7 +8781,7 @@ a:hover {
 }
 /* line 37, ../scss/_mixins.scss */
 #homepage .hero-wrapper .row .text ul.nav i, #about .skills .column i, #about .companies .column i {
-  text-align: left;
+  text-align: center;
   float: left;
 }
 /* line 41, ../scss/_mixins.scss */
@@ -9193,7 +9193,7 @@ a:hover {
 @media only screen and (min-width: 40.063em) {
   /* line 35, ../scss/_about-hero.scss */
   #about .hero-wrapper .row .content .text {
-    width: 70%;
+    width: 80%;
   }
 }
 /* line 42, ../scss/_about-hero.scss */
@@ -9301,6 +9301,11 @@ a:hover {
 /* line 25, ../scss/_about-skills.scss */
 #about .skills .column i, #about .skills .column p {
   color: white;
+}
+/* line 28, ../scss/_about-skills.scss */
+#about .skills .column i {
+  font-size: 2.8em;
+  margin-right: 10px;
 }
 /* line 2, ../scss/_about-companies.scss */
 #about .content {
