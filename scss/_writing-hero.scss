@@ -40,6 +40,6 @@
 
 &.writing-title-example {
 	.hero-wrapper {
-		@include background($filename: '../images/1.jpg', $bgcolor: rgba($grey,.5), $bgattachment: fixed);
+		@include background($filename: '../images/writings/slideshows/example/1.jpg', $bgcolor: rgba($grey,.5), $bgattachment: fixed);
 	}
 }

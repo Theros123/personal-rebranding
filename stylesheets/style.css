@@ -8838,31 +8838,36 @@ a:hover {
 }
 /* line 9, ../scss/_homepage-hero.scss */
 #homepage .hero-overflow {
-  min-height: 200px;
+  min-height: inherit;
 }
 @media only screen and (min-width: 40.063em) {
   /* line 9, ../scss/_homepage-hero.scss */
   #homepage .hero-overflow {
-    min-height: 300px;
+    min-height: 350px;
   }
 }
 @media only screen and (min-width: 64.063em) {
   /* line 9, ../scss/_homepage-hero.scss */
   #homepage .hero-overflow {
-    height: 100%;
     width: 100%;
-    min-height: 600px;
+    min-height: 500px;
+    max-height: 600px;
   }
 }
 /* line 25, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper {
-  height: 100%;
-  height: -moz-calc(100% - 150px);
-  height: -webkit-calc(100% - 150px);
-  height: calc(100% - 150px);
   overflow: hidden;
 }
-/* line 31, ../scss/_homepage-hero.scss */
+@media only screen and (min-width: 64.063em) {
+  /* line 25, ../scss/_homepage-hero.scss */
+  #homepage .hero-wrapper {
+    height: 100%;
+    height: -moz-calc(600px - 150px);
+    height: -webkit-calc(600px - 150px);
+    height: calc(600px - 150px);
+  }
+}
+/* line 34, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .image-wrapper {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -8871,7 +8876,7 @@ a:hover {
   display: none;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 31, ../scss/_homepage-hero.scss */
+  /* line 34, ../scss/_homepage-hero.scss */
   #homepage .hero-wrapper .row .image-wrapper {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -8882,7 +8887,7 @@ a:hover {
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 31, ../scss/_homepage-hero.scss */
+  /* line 34, ../scss/_homepage-hero.scss */
   #homepage .hero-wrapper .row .image-wrapper {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -8890,23 +8895,23 @@ a:hover {
     float: left;
   }
 }
-/* line 45, ../scss/_homepage-hero.scss */
+/* line 48, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .image-wrapper img {
   padding: 1em 4.5em 0;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 45, ../scss/_homepage-hero.scss */
+  /* line 48, ../scss/_homepage-hero.scss */
   #homepage .hero-wrapper .row .image-wrapper img {
     padding: 3em 1.5em 0 1.5em;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 45, ../scss/_homepage-hero.scss */
+  /* line 48, ../scss/_homepage-hero.scss */
   #homepage .hero-wrapper .row .image-wrapper img {
     padding: 1em 0 0;
   }
 }
-/* line 56, ../scss/_homepage-hero.scss */
+/* line 59, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .image-wrapper.mobile-column {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -8915,12 +8920,12 @@ a:hover {
   display: block;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 56, ../scss/_homepage-hero.scss */
+  /* line 59, ../scss/_homepage-hero.scss */
   #homepage .hero-wrapper .row .image-wrapper.mobile-column {
     display: none;
   }
 }
-/* line 65, ../scss/_homepage-hero.scss */
+/* line 68, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .text {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -8929,7 +8934,7 @@ a:hover {
   padding: 1.5em 0.9375rem 0;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 65, ../scss/_homepage-hero.scss */
+  /* line 68, ../scss/_homepage-hero.scss */
   #homepage .hero-wrapper .row .text {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -8939,7 +8944,7 @@ a:hover {
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 65, ../scss/_homepage-hero.scss */
+  /* line 68, ../scss/_homepage-hero.scss */
   #homepage .hero-wrapper .row .text {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -8948,20 +8953,20 @@ a:hover {
     padding-top: 5em;
   }
 }
-/* line 78, ../scss/_homepage-hero.scss */
+/* line 81, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .text h1, #homepage .hero-wrapper .row .text h3, #homepage .hero-wrapper .row .text h4 {
   color: #333333;
 }
-/* line 81, ../scss/_homepage-hero.scss */
+/* line 84, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .text h1 {
   margin: 0;
 }
-/* line 84, ../scss/_homepage-hero.scss */
+/* line 87, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .text h4 {
   margin-bottom: 0;
   line-height: 1;
 }
-/* line 89, ../scss/_homepage-hero.scss */
+/* line 92, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .text ul.nav {
   width: 100%;
   margin-left: auto;
@@ -8981,7 +8986,7 @@ a:hover {
 #homepage .hero-wrapper .row .text ul.nav:after {
   clear: both;
 }
-/* line 96, ../scss/_homepage-hero.scss */
+/* line 99, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .text ul.nav li {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -8989,7 +8994,7 @@ a:hover {
   float: left;
   padding: 0 .5em 0 0;
 }
-/* line 100, ../scss/_homepage-hero.scss */
+/* line 103, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .text ul.nav li i {
   padding-bottom: 1em;
 }
@@ -9154,10 +9159,10 @@ a:hover {
   height: -moz-calc(100% - 60px);
   height: -webkit-calc(100% - 60px);
   height: calc(100% - 60px);
-  background: transparent url(../images/walk.png) no-repeat;
+  background: transparent url(../images/about/hero.png) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 450px;
+  min-height: 350px;
   position: relative;
 }
 /* line 89, ../scss/_mixins.scss */
@@ -9165,27 +9170,33 @@ a:hover {
   height: 100%;
   background-color: rgba(119, 119, 119, 0.5);
 }
-/* line 21, ../scss/_about-hero.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 10, ../scss/_about-hero.scss */
+  #about .hero-wrapper {
+    max-height: 500px;
+  }
+}
+/* line 27, ../scss/_about-hero.scss */
 #about .hero-wrapper .row {
   position: relative;
   height: 100%;
 }
-/* line 25, ../scss/_about-hero.scss */
+/* line 31, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content {
   position: absolute;
   bottom: 10%;
 }
-/* line 29, ../scss/_about-hero.scss */
+/* line 35, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text {
   width: 100%;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 29, ../scss/_about-hero.scss */
+  /* line 35, ../scss/_about-hero.scss */
   #about .hero-wrapper .row .content .text {
     width: 70%;
   }
 }
-/* line 36, ../scss/_about-hero.scss */
+/* line 42, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text h1, #about .hero-wrapper .row .content .text p {
   color: white;
 }
@@ -9377,7 +9388,7 @@ a:hover {
 }
 /* line 42, ../scss/_writing-hero.scss */
 #writing.writing-title-example .hero-wrapper {
-  background: transparent url(../images/1.jpg) no-repeat;
+  background: transparent url(../images/writings/slideshows/example/1.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
