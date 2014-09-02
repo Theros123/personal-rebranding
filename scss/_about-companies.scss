@@ -6,19 +6,20 @@
 .companies {
 	@extend %content-section-styling;
 	background: $lightGrey;
-		
+
+	@media #{$medium-up} {
+		// To offset transform 
+		max-height: 220px;
+	}
+
 	.column {
-		@include grid-column(4);
+		@include grid-column(6);
 		@extend %content-section-columns;
+		@extend %vertical-align;
+		margin-top: 2.5em;
 
 		@media #{$medium-up} {
-			@include grid-column(3);
+			@include grid-column(2.4);
 		}
-		@media #{$large-up} {
-			@include grid-column(2);
-		}
-
-		img {
-			width: 100%;		}
 	}
 } 

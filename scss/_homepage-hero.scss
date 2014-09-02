@@ -50,6 +50,7 @@
 
 				@media #{$medium-up} {
 					padding: 3em 1.5em 0 1.5em;
+					min-height: 335px;
 				}
 				@media #{$large-up} {
 					padding: 1em 0 0;
@@ -88,22 +89,25 @@
 				margin-bottom: 0;
 				line-height: 1;
 			}
-			
-			ul.nav {
-				@include grid-row();
-				@extend %content-section-columns;
-				list-style: none;
-				// Overwriting default margins
-				margin: 0;
+		}
+		.homepage-nav {
+			@include grid-row();
+			@extend %content-section-columns;
+			list-style: none;
+			// Overwriting default margins
+			margin: 1em 0 0 0;
 
-				li {
-					@include grid-column(6);
-					padding: 0 .5em 0 0;
+			li {
+				@include grid-column(6);
+				padding: 0 .5em 0 0;
 
-					i {
-						// To force text to the right of icon always
-						padding-bottom: 1em;
-					}
+				i {
+					// To force text to the right of icon always
+					padding-bottom: 1em;
+					text-align: left;
+				}
+				p {
+					margin-left: 45px;
 				}
 			}
 		}

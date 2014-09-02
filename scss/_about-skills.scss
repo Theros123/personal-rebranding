@@ -14,9 +14,12 @@
 	.column {
 		@include grid-column(12);
 		@extend %content-section-columns;
+		
+		padding-top: $sectionPadding/2;
 
 		@media #{$medium-up} {
 			@include grid-column(6);
+			padding-top: $writingSectionPadding;
 		}
 		@media #{$large-up} {
 			@include grid-column(4);

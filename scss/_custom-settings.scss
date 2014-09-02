@@ -4,13 +4,17 @@
 
 @font-face {
   font-family: 'myriad-pro';
-  src: url('../fonts/MYRIADPRO-REGULAR.woff') format('woff') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url('../fonts/MYRIADPRO-REGULAR.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/RobotoCondensed-Regular.ttf');
 }
 
-h1, h2 {
-	font-family: 'myriad-pro', tahoma, verdana, sans-serif;
+h1, h2, h3 {
+	font-family: 'Roboto', 'myriad-pro', tahoma, verdana, sans-serif;
 }
-h3, h4, p {
+h4, p {
 	font-family: tahoma, verdana, sans-serif;
 }
 h1 {
@@ -23,20 +27,23 @@ h1 {
 }
 h2 {
 	font-size: 1.5em;
+	margin-bottom: 0;
 	
 	@media #{$large-up} {
 		font-size: 2em;
 	}
 }
 h3 {
-	font-size: 1.2em;
+	font-size: 1.3em;
+	margin-bottom: 0;
 
 	@media #{$large-up} {
-		font-size: 1.3em;
+		font-size: 1.5em;
 	}
 }
 h4 {
 	font-size: 1.1em;
+	margin-bottom: 0;
 
 	@media #{$large-up} {
 		font-size: 1.1em;
@@ -44,16 +51,18 @@ h4 {
 }
 p {
 	font-size: 1em;
+	margin-bottom: 0;
 }
 
 // Color Settings
 
 $white: white;
-$lightGrey: #eee;
+$lightGrey: #F7F7F7;
 $grey: #777;
 $black: #333;
-$blue: #00A0B0;
-$red: #CC333F;
+$blue: #1e9ed6;
+$red: #DB4442;
+$orange: #FF8A00;
 
 // Link settings
 

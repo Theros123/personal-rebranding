@@ -5,6 +5,7 @@
 
 .blockquote {
 	@extend %content-section-styling;
+	@extend %writings-headings;
 	padding: $writingSectionPadding 0 0;
 
 	// If section is first/last, use alternate padding values
@@ -37,10 +38,13 @@
 		}
 
 		blockquote {
-			color: $blue;
+			color: $orange;
 			font-size: 1.5em;
 			line-height: 1.3;
 			border: none;
+		}
+		cite {
+			margin-top: $sectionListPadding;
 		}
 	}
 }
