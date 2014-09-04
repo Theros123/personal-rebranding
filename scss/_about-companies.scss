@@ -9,7 +9,7 @@
 
 	@media #{$medium-up} {
 		// To offset transform 
-		max-height: 220px;
+		max-height: 300px;
 	}
 
 	.column {
@@ -17,9 +17,10 @@
 		@extend %content-section-columns;
 		@extend %vertical-align;
 		margin-top: 2.5em;
+		min-height: 60px;
 
 		@media #{$medium-up} {
-			@include grid-column(2.4);
+			@include grid-column(3);
 		}
 	}
 } 
