@@ -112,10 +112,14 @@
 }
 
 // Mixin for CSS multi column support
-@mixin columns($number) {
+@mixin columns($number, $columnGap) {
   column-count:$number;
   -moz-column-count:$number; /* Firefox */
   -webkit-column-count:$number; /* Safari and Chrome */
+
+  	-webkit-column-gap: $columnGap; /* Chrome, Safari, Opera */
+	-moz-column-gap: $columnGap; /* Firefox */
+    column-gap: $columnGap;
 }
 
 // Mixins for Font Awesome Rotation

@@ -54,9 +54,14 @@
 				font-size: 1em;
 				width: inherit;
 				height: auto;
-				background: rgba(0,0,0,.3);
 				padding: 1em $sectionColumnGutter;
+				background: rgba(0,0,0,.9);
+				position: inherit;
 
+				@media #{$medium-up} {
+					background: rgba(0,0,0,.3);
+					position: absolute;
+				}
 				@media #{$large-up} {
 					right: 0;
 					height: 100%;

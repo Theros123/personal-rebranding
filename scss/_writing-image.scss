@@ -12,6 +12,14 @@
 	img {
 		width: 100%;
 	}
+	.image-caption {
+		font-size: 1em;
+		width: inherit;
+		height: auto;
+		background: rgba(0, 0, 0, 0.9);
+		color: $white;
+		padding: 1em 0.9375rem;
+	}
 
 	// If section is first/last, use alternate padding values
 	&.first {

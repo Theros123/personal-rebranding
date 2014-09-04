@@ -18,15 +18,22 @@
 	}
 	
 	.column {
-		@include columns(1);
 
-		@media #{$medium-up} {
-			@include columns(2);
+		&.columns {
+			@include columns(1, 0);
+
+			@media #{$medium-up} {
+				@include columns(2, 2em);
+			}
 		}
 
 		p {
 			// Overwriting default padding
-			margin-bottom: 0;
+			margin-bottom: 0; 
+
+			+ p {
+				padding-top: 1em;
+			}
 		}
 	}
 }
