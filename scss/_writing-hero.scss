@@ -10,6 +10,10 @@
 .hero-wrapper {
 	height: 350px;
 
+	@media #{$large-up} {
+		height: 500px;
+	}
+
 	// Needed to position back arrow nav
 	position: relative;
 
