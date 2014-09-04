@@ -14,14 +14,12 @@
 	}
 
 	.column {
-		@include grid-column(6);
+		@include grid-column(12);
 		padding-top: $sectionPadding/2;
-		min-height: 100px;
 		
 		@media #{$medium-up} {
 			@include grid-column(4);
-			padding-top: $sectionListPadding;
-			min-height: inherit;
+			padding-top: $writingSectionPadding;
 		}
 		p {
 			padding: 0;

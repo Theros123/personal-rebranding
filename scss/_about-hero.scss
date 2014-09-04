@@ -36,11 +36,18 @@
 				width: 100%;
 
 				@media #{$medium-up} {
-					width: 70%;
+					width: 80%;
 				}
 				
 				h1, p {
 					color: $white;
+				}
+				p {
+					font-style: italic;
+
+					&:before {
+						content: "\2014 \0020";
+					}
 				}
 			}
 		}

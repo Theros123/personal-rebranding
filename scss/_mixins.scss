@@ -1,20 +1,6 @@
 @import "app";
 @import "_custom-settings";
 
-// Project Mixins
-
-// Mixins for media queries
-
-// Case 1 - Default scenarios
-@mixin responsive() {
-    @media #{$small-only} {
-      min-height: inherit;
-    }
-    @media #{$xlarge-up} {
-      height: 768px;
-  }
-}
-
 // Mixins for section layout
 
 @mixin content-columns($column1: 7, $column2: 5) {
@@ -32,16 +18,22 @@
     padding: $sectionPadding 0;
 }
 %content-section-columns {
-  padding-top: $sectionListPadding;
-
   i {
-    text-align: left;
+    text-align: center;
     float: left;
   }
   p {
     margin-top: -5px;
     margin-bottom: 0;
   }
+}
+%writings-headings {
+	h2 + * {
+		padding-top: $sectionPadding/3;
+	}
+	h3 + * {
+		padding-top: $sectionListPadding/2;
+	}
 }
 %nav-back {
 	position: absolute;
@@ -71,15 +63,32 @@
 %footer {
   background: white;
 
-  .content {
-    padding: 1em $sectionColumnGutter;
+	.content {
+		padding: 1em $sectionColumnGutter;
 
-    h3 {
-      margin: 0;
-    }
-  }
+		h4 {
+		  margin: 0;
+		}
+		i {
+			margin-left: .3em;
+			font-size: 1.3em;
+		}
+	}
 }
-
+%vertical-align {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+  
+  	// Find better way to abstract this
+  	img {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
 // Mixin to control section background and color tint
 @mixin background($filename: none, $repeat: no-repeat, $bgsize: cover, $bgcolor: none, $bgattachment: scroll) {
     background: transparent url(#{$filename}) $repeat;
@@ -103,10 +112,14 @@
 }
 
 // Mixin for CSS multi column support
-@mixin columns($number) {
+@mixin columns($number, $columnGap) {
   column-count:$number;
   -moz-column-count:$number; /* Firefox */
   -webkit-column-count:$number; /* Safari and Chrome */
+
+  	-webkit-column-gap: $columnGap; /* Chrome, Safari, Opera */
+	-moz-column-gap: $columnGap; /* Firefox */
+    column-gap: $columnGap;
 }
 
 // Mixins for Font Awesome Rotation
