@@ -22,9 +22,9 @@
 	}
 
 	// If section is first/last, use alternate padding values
-	&.first {
-		padding-top: $sectionPadding;
-	}
+	// &.first {
+	// 	padding-top: $sectionPadding;
+	// }
 	&.last {
 		padding-bottom: $sectionPadding;
 	}

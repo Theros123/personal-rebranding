@@ -28,11 +28,19 @@
   }
 }
 %writings-headings {
-	h2 + * {
-		padding-top: $sectionPadding/3;
+	// Control all padding on any writing pages using content elements, not by section
+	h2 {
+		padding: $sectionPadding/3 0 $sectionListPadding/2;
 	}
-	h3 + * {
-		padding-top: $sectionListPadding/2;
+	h3 {
+		padding: $sectionListPadding/2 0;
+	}
+	p {
+		padding-top: 1em;
+	}
+	// To prevent extra padding being added to each paragraph following a heading
+	p:first-child {
+		padding-top: 0;
 	}
 }
 %nav-back {
