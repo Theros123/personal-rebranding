@@ -8056,19 +8056,13 @@ th.hide-for-touch {
   }
 }
 @font-face {
-  font-family: 'myriad-pro';
-  src: url("../fonts/MYRIADPRO-REGULAR.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
   font-family: 'Roboto';
   src: url("../fonts/RobotoCondensed-Regular.ttf");
 }
 
 /* line 14, ../scss/_custom-settings.scss */
 h1, h2, h3 {
-  font-family: 'Roboto', 'myriad-pro', tahoma, verdana, sans-serif;
+  font-family: 'Roboto', tahoma, verdana, sans-serif;
 }
 
 /* line 17, ../scss/_custom-settings.scss */
@@ -8126,16 +8120,17 @@ h4 {
 
 /* line 52, ../scss/_custom-settings.scss */
 p {
-  font-size: 1em;
+  font-size: 1.0888em;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
-/* line 69, ../scss/_custom-settings.scss */
+/* line 70, ../scss/_custom-settings.scss */
 a {
   color: #1e9ed6;
   text-decoration: none;
 }
-/* line 73, ../scss/_custom-settings.scss */
+/* line 74, ../scss/_custom-settings.scss */
 a:hover {
   text-decoration: underline;
   color: #187da9;
@@ -8705,19 +8700,13 @@ th.hide-for-touch {
   }
 }
 @font-face {
-  font-family: 'myriad-pro';
-  src: url("../fonts/MYRIADPRO-REGULAR.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
   font-family: 'Roboto';
   src: url("../fonts/RobotoCondensed-Regular.ttf");
 }
 
 /* line 14, ../scss/_custom-settings.scss */
 h1, h2, h3 {
-  font-family: 'Roboto', 'myriad-pro', tahoma, verdana, sans-serif;
+  font-family: 'Roboto', tahoma, verdana, sans-serif;
 }
 
 /* line 17, ../scss/_custom-settings.scss */
@@ -8775,16 +8764,17 @@ h4 {
 
 /* line 52, ../scss/_custom-settings.scss */
 p {
-  font-size: 1em;
+  font-size: 1.0888em;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
-/* line 69, ../scss/_custom-settings.scss */
+/* line 70, ../scss/_custom-settings.scss */
 a {
   color: #1e9ed6;
   text-decoration: none;
 }
-/* line 73, ../scss/_custom-settings.scss */
+/* line 74, ../scss/_custom-settings.scss */
 a:hover {
   text-decoration: underline;
   color: #187da9;
@@ -8806,66 +8796,74 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* line 31, ../scss/_mixins.scss */
-#writing .blockquote h2 + *, #writing .column-text h2 + * {
+/* line 32, ../scss/_mixins.scss */
+#writing .blockquote h2, #writing .column-text h2 {
+  padding: 1em 0 0.5em;
+}
+/* line 35, ../scss/_mixins.scss */
+#writing .blockquote h3, #writing .column-text h3 {
+  padding: 0.5em 0;
+}
+/* line 38, ../scss/_mixins.scss */
+#writing .blockquote p, #writing .column-text p {
   padding-top: 1em;
 }
-/* line 34, ../scss/_mixins.scss */
-#writing .blockquote h3 + *, #writing .column-text h3 + * {
-  padding-top: 0.5em;
+/* line 42, ../scss/_mixins.scss */
+#writing .blockquote p:first-child, #writing .column-text p:first-child {
+  padding-top: 0;
 }
 
-/* line 38, ../scss/_mixins.scss */
+/* line 46, ../scss/_mixins.scss */
 #about .back, #writing .back {
   position: absolute;
   top: 1.5em;
   z-index: 100;
 }
-/* line 44, ../scss/_mixins.scss */
+/* line 52, ../scss/_mixins.scss */
 #about .back a:hover, #writing .back a:hover {
   text-decoration: none;
 }
-/* line 48, ../scss/_mixins.scss */
+/* line 56, ../scss/_mixins.scss */
 #about .back p, #writing .back p {
   color: white;
   background: #777777;
   padding: .5em 1em;
   margin: 0;
 }
-/* line 54, ../scss/_mixins.scss */
+/* line 62, ../scss/_mixins.scss */
 #about .back p:hover, #writing .back p:hover {
   background: #5e5e5e;
 }
-/* line 58, ../scss/_mixins.scss */
+/* line 66, ../scss/_mixins.scss */
 #about .back i, #writing .back i {
   padding-right: 5px;
 }
 
-/* line 63, ../scss/_mixins.scss */
+/* line 71, ../scss/_mixins.scss */
 #homepage #footer, #about #footer, #writing #footer {
   background: white;
 }
-/* line 66, ../scss/_mixins.scss */
+/* line 74, ../scss/_mixins.scss */
 #homepage #footer .content, #about #footer .content, #writing #footer .content {
   padding: 1em 0.9375rem;
 }
-/* line 69, ../scss/_mixins.scss */
+/* line 77, ../scss/_mixins.scss */
 #homepage #footer .content h4, #about #footer .content h4, #writing #footer .content h4 {
   margin: 0;
 }
-/* line 72, ../scss/_mixins.scss */
+/* line 80, ../scss/_mixins.scss */
 #homepage #footer .content i, #about #footer .content i, #writing #footer .content i {
   margin-left: .3em;
   font-size: 1.3em;
 }
 
-/* line 78, ../scss/_mixins.scss */
+/* line 86, ../scss/_mixins.scss */
 #about .companies .column {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 84, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 #about .companies .column img {
   position: relative;
   top: 50%;
@@ -9218,7 +9216,7 @@ a:hover {
   min-height: 350px;
   position: relative;
 }
-/* line 98, ../scss/_mixins.scss */
+/* line 106, ../scss/_mixins.scss */
 #about .hero-wrapper .tint-wrapper {
   height: 100%;
   background-color: rgba(119, 119, 119, 0.5);
@@ -9475,7 +9473,7 @@ a:hover {
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 98, ../scss/_mixins.scss */
+/* line 106, ../scss/_mixins.scss */
 #writing.writing-title-example .hero-wrapper .tint-wrapper {
   height: 100%;
   background-color: rgba(119, 119, 119, 0.5);
@@ -9486,7 +9484,7 @@ a:hover {
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 98, ../scss/_mixins.scss */
+/* line 106, ../scss/_mixins.scss */
 #writing.things-you-dont-learn-in-college .hero-wrapper .tint-wrapper {
   height: 100%;
   background-color: rgba(119, 119, 119, 0.5);
@@ -9512,11 +9510,7 @@ a:hover {
 }
 /* line 6, ../scss/_writing-blockquote.scss */
 #writing .blockquote {
-  padding: 2em 0 0;
-}
-/* line 12, ../scss/_writing-blockquote.scss */
-#writing .blockquote.first {
-  padding-top: 3em;
+  padding: 0;
 }
 /* line 15, ../scss/_writing-blockquote.scss */
 #writing .blockquote.last {
@@ -9548,7 +9542,7 @@ a:hover {
   padding-right: 0.9375rem;
   width: 100%;
   float: left;
-  padding-top: 1.5em;
+  padding-top: 1em;
 }
 @media only screen and (min-width: 40.063em) {
   /* line 31, ../scss/_writing-blockquote.scss */
@@ -9557,17 +9551,16 @@ a:hover {
     padding-right: 0.9375rem;
     width: 41.66667%;
     float: left;
-    padding-top: 0;
   }
 }
-/* line 40, ../scss/_writing-blockquote.scss */
+/* line 39, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote blockquote {
   color: #ff8a00;
   font-size: 1.5em;
   line-height: 1.3;
   border: none;
 }
-/* line 46, ../scss/_writing-blockquote.scss */
+/* line 45, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote cite {
   margin-top: 1em;
 }
@@ -9580,11 +9573,7 @@ a:hover {
 }
 /* line 6, ../scss/_writing-text.scss */
 #writing .column-text {
-  padding: 2em 0 0;
-}
-/* line 13, ../scss/_writing-text.scss */
-#writing .column-text.first {
-  padding-top: 3em;
+  padding: 0;
 }
 /* line 16, ../scss/_writing-text.scss */
 #writing .column-text.last {
@@ -9622,10 +9611,6 @@ a:hover {
 #writing .column-text .column p {
   margin-bottom: 0;
 }
-/* line 34, ../scss/_writing-text.scss */
-#writing .column-text .column p + p {
-  padding-top: 1em;
-}
 /* line 2, ../scss/_writing-image.scss */
 #writing .content {
   padding-left: 0.9375rem;
@@ -9652,10 +9637,6 @@ a:hover {
   color: white;
   padding: 1em 0.9375rem;
 }
-/* line 25, ../scss/_writing-image.scss */
-#writing .image.first {
-  padding-top: 3em;
-}
 /* line 28, ../scss/_writing-image.scss */
 #writing .image.last {
   padding-bottom: 3em;
@@ -9672,10 +9653,6 @@ a:hover {
   padding: 0;
   margin: 3em 0 0;
   background: #f7f7f7;
-}
-/* line 13, ../scss/_writing-image-slider.scss */
-#writing .image-slider.first {
-  padding-top: 3em;
 }
 /* line 16, ../scss/_writing-image-slider.scss */
 #writing .image-slider.last {

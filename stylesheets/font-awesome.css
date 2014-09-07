@@ -8060,19 +8060,13 @@ th.hide-for-touch {
   }
 }
 @font-face {
-  font-family: 'myriad-pro';
-  src: url("../fonts/MYRIADPRO-REGULAR.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
   font-family: 'Roboto';
   src: url("../fonts/RobotoCondensed-Regular.ttf");
 }
 
 /* line 14, ../scss/_custom-settings.scss */
 h1, h2, h3 {
-  font-family: 'Roboto', 'myriad-pro', tahoma, verdana, sans-serif;
+  font-family: 'Roboto', tahoma, verdana, sans-serif;
 }
 
 /* line 17, ../scss/_custom-settings.scss */
@@ -8130,16 +8124,17 @@ h4 {
 
 /* line 52, ../scss/_custom-settings.scss */
 p {
-  font-size: 1em;
+  font-size: 1.0888em;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
-/* line 69, ../scss/_custom-settings.scss */
+/* line 70, ../scss/_custom-settings.scss */
 a {
   color: #1e9ed6;
   text-decoration: none;
 }
-/* line 73, ../scss/_custom-settings.scss */
+/* line 74, ../scss/_custom-settings.scss */
 a:hover {
   text-decoration: underline;
   color: #187da9;

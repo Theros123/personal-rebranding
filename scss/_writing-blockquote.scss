@@ -6,12 +6,12 @@
 .blockquote {
 	@extend %content-section-styling;
 	@extend %writings-headings;
-	padding: $writingSectionPadding 0 0;
+	padding: 0;
 
 	// If section is first/last, use alternate padding values
-	&.first {
-		padding-top: $sectionPadding;
-	}
+	// &.first {
+	// 	padding-top: $sectionPadding;
+	// }
 	&.last {
 		padding-bottom: $sectionPadding;
 	}
@@ -30,11 +30,10 @@
 	}
 	.quote {
 		@include grid-column(12);
-		padding-top: $sectionPadding/2;
+		padding-top: $sectionListPadding;
 
 		@media #{$medium-up} {
 			@include grid-column(5);
-			padding-top: 0;
 		}
 
 		blockquote {

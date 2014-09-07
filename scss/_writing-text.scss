@@ -7,12 +7,12 @@
 	@extend %content-section-styling;
 	@extend %writings-headings;
 			
-	padding: $writingSectionPadding 0 0;
+	padding: 0;
 
 	// If section is first/last, use alternate padding values
-	&.first {
-		padding-top: $sectionPadding;
-	}
+	// &.first {
+	// 	padding-top: $sectionPadding;
+	// }
 	&.last {
 		padding-bottom: $sectionPadding;
 	}
@@ -30,10 +30,6 @@
 		p {
 			// Overwriting default padding
 			margin-bottom: 0; 
-
-			+ p {
-				padding-top: 1em;
-			}
 		}
 	}
 }
