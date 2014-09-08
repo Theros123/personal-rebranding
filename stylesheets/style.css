@@ -8787,30 +8787,30 @@ a:hover {
 
 /* line 21, ../scss/_mixins.scss */
 #homepage .hero-wrapper .row .homepage-nav i, #about .skills .column i, #about .companies .column i {
-  text-align: center;
-  float: left;
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
 }
-/* line 25, ../scss/_mixins.scss */
+/* line 26, ../scss/_mixins.scss */
 #homepage .hero-wrapper .row .homepage-nav p, #about .skills .column p, #about .companies .column p {
+  display: inline-block;
+  width: 80%;
   margin-top: -5px;
   margin-bottom: 0;
+  padding-left: 5px;
 }
 
-/* line 32, ../scss/_mixins.scss */
+/* line 36, ../scss/_mixins.scss */
 #writing .blockquote h2, #writing .column-text h2 {
-  padding: 1em 0 0.5em;
+  padding: 1em 0 0;
 }
-/* line 35, ../scss/_mixins.scss */
+/* line 39, ../scss/_mixins.scss */
 #writing .blockquote h3, #writing .column-text h3 {
-  padding: 0.5em 0;
-}
-/* line 38, ../scss/_mixins.scss */
-#writing .blockquote p, #writing .column-text p {
-  padding-top: 1em;
+  padding: 0.5em 0 0;
 }
 /* line 42, ../scss/_mixins.scss */
-#writing .blockquote p:first-child, #writing .column-text p:first-child {
-  padding-top: 0;
+#writing .blockquote p, #writing .column-text p {
+  padding-top: 1em;
 }
 
 /* line 46, ../scss/_mixins.scss */
@@ -9040,12 +9040,12 @@ a:hover {
 }
 /* line 104, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .homepage-nav li i {
-  padding-bottom: 1em;
-  text-align: left;
+  padding-bottom: 0;
 }
-/* line 109, ../scss/_homepage-hero.scss */
+/* line 108, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .homepage-nav li p {
-  margin-left: 45px;
+  margin-left: 0;
+  padding-left: 15px;
 }
 /* line 2, ../scss/_homepage-hero-footer.scss */
 #homepage .content {
@@ -9367,16 +9367,17 @@ a:hover {
     padding-right: 0.9375rem;
     width: 33.33333%;
     float: left;
+    padding-right: 1%;
+    padding-left: 1%;
   }
 }
-/* line 28, ../scss/_about-skills.scss */
+/* line 30, ../scss/_about-skills.scss */
 #about .skills .column i, #about .skills .column p {
   color: white;
 }
-/* line 31, ../scss/_about-skills.scss */
+/* line 33, ../scss/_about-skills.scss */
 #about .skills .column i {
   font-size: 2.8em;
-  margin-right: 10px;
 }
 /* line 2, ../scss/_about-companies.scss */
 #about .content {
@@ -9621,7 +9622,7 @@ a:hover {
 /* line 6, ../scss/_writing-image.scss */
 #writing .image {
   padding: 0;
-  margin: 3em 0 0;
+  margin: 3em 0 2em;
   background: #f7f7f7;
 }
 /* line 12, ../scss/_writing-image.scss */
@@ -9651,7 +9652,7 @@ a:hover {
 /* line 6, ../scss/_writing-image-slider.scss */
 #writing .image-slider {
   padding: 0;
-  margin: 3em 0 0;
+  margin: 3em 0 2em;
   background: #f7f7f7;
 }
 /* line 16, ../scss/_writing-image-slider.scss */
