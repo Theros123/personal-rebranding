@@ -48,10 +48,16 @@
 &.writing-title-example {
 	.hero-wrapper {
 		@include background($filename: '../images/writings/slideshows/example/1.jpg', $bgcolor: rgba($grey,.5), $bgattachment: fixed);
+		background-position: center;
 	}
 }
 &.things-you-dont-learn-in-college {
 	.hero-wrapper {
-		@include background($filename: '../images/writings/things-you-dont-learn-in-college/hero.jpg', $bgcolor: rgba($grey,.5), $bgattachment: fixed);
+		@include background($filename: '../images/writings/things-you-dont-learn-in-college/hero.jpg', $bgcolor: rgba($grey,.8), $bgattachment: fixed);
+		background-position: center;
+
+		@media #{$medium-up} {
+			@include background($filename: '../images/writings/things-you-dont-learn-in-college/hero.jpg', $bgcolor: rgba($grey,.5), $bgattachment: fixed);	
+		}
 	}
 }
