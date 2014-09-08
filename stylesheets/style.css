@@ -8786,13 +8786,13 @@ a:hover {
 }
 
 /* line 21, ../scss/_mixins.scss */
-#homepage .hero-wrapper .row .homepage-nav i, #about .skills .column i, #about .companies .column i {
+#homepage .hero-wrapper .row .homepage-nav i, #about .skills .list-item i, #about .companies .list-item i {
   display: inline-block;
   width: 20%;
   vertical-align: top;
 }
 /* line 26, ../scss/_mixins.scss */
-#homepage .hero-wrapper .row .homepage-nav p, #about .skills .column p, #about .companies .column p {
+#homepage .hero-wrapper .row .homepage-nav p, #about .skills .list-item p, #about .companies .list-item p {
   display: inline-block;
   width: 80%;
   margin-top: -5px;
@@ -8855,21 +8855,6 @@ a:hover {
 #homepage #footer .content i, #about #footer .content i, #writing #footer .content i {
   margin-left: .3em;
   font-size: 1.3em;
-}
-
-/* line 86, ../scss/_mixins.scss */
-#about .companies .column {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-/* line 92, ../scss/_mixins.scss */
-#about .companies .column img {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 /* line 4, ../scss/_homepage-hero.scss */
@@ -9343,40 +9328,35 @@ a:hover {
   color: white;
 }
 /* line 14, ../scss/_about-skills.scss */
-#about .skills .column {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+#about .skills .list-item {
+  display: inline-block;
   width: 100%;
-  float: left;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  vertical-align: top;
   padding-top: 1.5em;
 }
 @media only screen and (min-width: 40.063em) {
   /* line 14, ../scss/_about-skills.scss */
-  #about .skills .column {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+  #about .skills .list-item {
     width: 50%;
-    float: left;
     padding-top: 2em;
+    padding-right: .5em;
+    padding-left: .5em;
   }
 }
 @media only screen and (min-width: 64.063em) {
   /* line 14, ../scss/_about-skills.scss */
-  #about .skills .column {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
-    padding-right: 1%;
-    padding-left: 1%;
+  #about .skills .list-item {
+    width: 33.333%;
   }
 }
-/* line 30, ../scss/_about-skills.scss */
-#about .skills .column i, #about .skills .column p {
+/* line 35, ../scss/_about-skills.scss */
+#about .skills .list-item i, #about .skills .list-item p {
   color: white;
 }
-/* line 33, ../scss/_about-skills.scss */
-#about .skills .column i {
+/* line 38, ../scss/_about-skills.scss */
+#about .skills .list-item i {
   font-size: 2.8em;
 }
 /* line 2, ../scss/_about-companies.scss */
@@ -9390,28 +9370,20 @@ a:hover {
 #about .companies {
   background: #f7f7f7;
 }
-@media only screen and (min-width: 40.063em) {
-  /* line 6, ../scss/_about-companies.scss */
-  #about .companies {
-    max-height: 300px;
-  }
-}
-/* line 15, ../scss/_about-companies.scss */
-#about .companies .column {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+/* line 10, ../scss/_about-companies.scss */
+#about .companies .list-item {
+  display: inline-block;
   width: 50%;
-  float: left;
-  margin-top: 2.5em;
-  min-height: 60px;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 1.5em;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 15, ../scss/_about-companies.scss */
-  #about .companies .column {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+  /* line 10, ../scss/_about-companies.scss */
+  #about .companies .list-item {
     width: 25%;
-    float: left;
   }
 }
 /* line 2, ../scss/_about-footer.scss */

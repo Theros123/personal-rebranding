@@ -11,20 +11,25 @@
 		color: $white;
 	}
 
-	.column {
-		@include grid-column(12);
+	.list-item {
+		display: inline-block;
+		width: 100%;
+		padding-right: $sectionColumnGutter;
+		padding-left: $sectionColumnGutter;
+		vertical-align: top;
+
 		@extend %content-section-columns;
 		
 		padding-top: $sectionPadding/2;
 
 		@media #{$medium-up} {
-			@include grid-column(6);
+			width: 50%;
 			padding-top: $writingSectionPadding;
+			padding-right: .5em;
+			padding-left: .5em;
 		}
 		@media #{$large-up} {
-			@include grid-column(4);
-			padding-right: 1%;
-			padding-left: 1%;
+			width: 33.333%;
 		}
 
 		i, p {
