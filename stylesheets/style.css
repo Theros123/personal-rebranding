@@ -9370,6 +9370,25 @@ a:hover {
 /* line 38, ../scss/_about-skills.scss */
 #about .skills .list-item i {
   font-size: 2.8em;
+  width: 17%;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 38, ../scss/_about-skills.scss */
+  #about .skills .list-item i {
+    width: 20%;
+  }
+}
+/* line 46, ../scss/_about-skills.scss */
+#about .skills .list-item p {
+  width: 83%;
+  padding-left: 20px;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 46, ../scss/_about-skills.scss */
+  #about .skills .list-item p {
+    width: 80%;
+    padding-left: 5px;
+  }
 }
 /* line 2, ../scss/_about-companies.scss */
 #about .content {
@@ -9433,26 +9452,21 @@ a:hover {
 #writing .hero-wrapper .row .content {
   position: absolute;
   bottom: 10%;
+  padding: 0 12%;
 }
-/* line 28, ../scss/_writing-hero.scss */
+/* line 29, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text {
   width: 100%;
 }
-@media only screen and (min-width: 40.063em) {
-  /* line 28, ../scss/_writing-hero.scss */
-  #writing .hero-wrapper .row .content .text {
-    width: 70%;
-  }
-}
-/* line 35, ../scss/_writing-hero.scss */
+/* line 32, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text h1, #writing .hero-wrapper .row .content .text p {
   color: white;
 }
-/* line 38, ../scss/_writing-hero.scss */
+/* line 35, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text p {
   font-style: italic;
 }
-/* line 49, ../scss/_writing-hero.scss */
+/* line 46, ../scss/_writing-hero.scss */
 #writing.writing-title-example .hero-wrapper {
   background: transparent url(../images/writings/slideshows/example/1.jpg) no-repeat;
   background-size: cover;
@@ -9464,7 +9478,7 @@ a:hover {
   height: 100%;
   background-color: rgba(119, 119, 119, 0.5);
 }
-/* line 55, ../scss/_writing-hero.scss */
+/* line 52, ../scss/_writing-hero.scss */
 #writing.things-you-dont-learn-in-college .hero-wrapper {
   background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
   background-size: cover;
@@ -9477,7 +9491,7 @@ a:hover {
   background-color: rgba(119, 119, 119, 0.8);
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 55, ../scss/_writing-hero.scss */
+  /* line 52, ../scss/_writing-hero.scss */
   #writing.things-you-dont-learn-in-college .hero-wrapper {
     background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
     background-size: cover;
@@ -9497,6 +9511,11 @@ a:hover {
   float: left;
 }
 /* line 9, ../scss/_writing-footer.scss */
+#writing #footer .content {
+  padding-right: 12%;
+  padding-left: 12%;
+}
+/* line 14, ../scss/_writing-footer.scss */
 #writing #footer h4 {
   border-top: 1px solid grey;
   padding-top: 1.5em;
@@ -9517,6 +9536,10 @@ a:hover {
   padding-bottom: 3em;
 }
 /* line 19, ../scss/_writing-blockquote.scss */
+#writing .blockquote .content {
+  padding: 0 12%;
+}
+/* line 23, ../scss/_writing-blockquote.scss */
 #writing .blockquote .text {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -9524,7 +9547,7 @@ a:hover {
   float: left;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 19, ../scss/_writing-blockquote.scss */
+  /* line 23, ../scss/_writing-blockquote.scss */
   #writing .blockquote .text {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -9532,11 +9555,11 @@ a:hover {
     float: left;
   }
 }
-/* line 27, ../scss/_writing-blockquote.scss */
+/* line 31, ../scss/_writing-blockquote.scss */
 #writing .blockquote .text p:last-child {
   margin-bottom: 0;
 }
-/* line 31, ../scss/_writing-blockquote.scss */
+/* line 35, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -9545,7 +9568,7 @@ a:hover {
   padding-top: 1em;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 31, ../scss/_writing-blockquote.scss */
+  /* line 35, ../scss/_writing-blockquote.scss */
   #writing .blockquote .quote {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -9553,14 +9576,14 @@ a:hover {
     float: left;
   }
 }
-/* line 39, ../scss/_writing-blockquote.scss */
+/* line 43, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote blockquote {
   color: #ff8a00;
   font-size: 1.5em;
   line-height: 1.3;
   border: none;
 }
-/* line 45, ../scss/_writing-blockquote.scss */
+/* line 49, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote cite {
   margin-top: 1em;
 }
@@ -9579,7 +9602,13 @@ a:hover {
 #writing .column-text.last {
   padding-bottom: 3em;
 }
-/* line 22, ../scss/_writing-text.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 20, ../scss/_writing-text.scss */
+  #writing .column-text .content {
+    padding: 0 12%;
+  }
+}
+/* line 29, ../scss/_writing-text.scss */
 #writing .column-text .column.columns {
   column-count: 1;
   -moz-column-count: 1;
@@ -9593,7 +9622,7 @@ a:hover {
   column-gap: 0;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 22, ../scss/_writing-text.scss */
+  /* line 29, ../scss/_writing-text.scss */
   #writing .column-text .column.columns {
     column-count: 2;
     -moz-column-count: 2;
@@ -9607,7 +9636,7 @@ a:hover {
     column-gap: 2em;
   }
 }
-/* line 30, ../scss/_writing-text.scss */
+/* line 37, ../scss/_writing-text.scss */
 #writing .column-text .column p {
   margin-bottom: 0;
 }
@@ -9625,10 +9654,20 @@ a:hover {
   background: #f7f7f7;
 }
 /* line 12, ../scss/_writing-image.scss */
+#writing .image .content {
+  padding: 0;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 12, ../scss/_writing-image.scss */
+  #writing .image .content {
+    padding: 0 10%;
+  }
+}
+/* line 18, ../scss/_writing-image.scss */
 #writing .image img {
   width: 100%;
 }
-/* line 15, ../scss/_writing-image.scss */
+/* line 21, ../scss/_writing-image.scss */
 #writing .image .image-caption {
   font-size: 1em;
   width: inherit;
@@ -9637,7 +9676,7 @@ a:hover {
   color: white;
   padding: 1em 0.9375rem;
 }
-/* line 28, ../scss/_writing-image.scss */
+/* line 34, ../scss/_writing-image.scss */
 #writing .image.last {
   padding-bottom: 3em;
 }
@@ -9666,41 +9705,47 @@ a:hover {
 #writing .image-slider a.orbit-next:hover, #writing .image-slider a.orbit-prev:hover {
   background: rgba(51, 51, 51, 0.7);
 }
-/* line 28, ../scss/_writing-image-slider.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 28, ../scss/_writing-image-slider.scss */
+  #writing .image-slider .content {
+    padding: 0 10%;
+  }
+}
+/* line 33, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container {
   height: 320px;
   overflow: hidden;
   position: relative;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 28, ../scss/_writing-image-slider.scss */
+  /* line 33, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container {
     height: 400px;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 28, ../scss/_writing-image-slider.scss */
+  /* line 33, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container {
-    height: 500px;
+    height: 415px;
   }
 }
-/* line 41, ../scss/_writing-image-slider.scss */
+/* line 46, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container li {
   height: 100%;
 }
-/* line 44, ../scss/_writing-image-slider.scss */
+/* line 49, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container li img {
   width: 100%;
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 44, ../scss/_writing-image-slider.scss */
+  /* line 49, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container li img {
     position: absolute;
     left: 0;
     max-width: 75%;
   }
 }
-/* line 53, ../scss/_writing-image-slider.scss */
+/* line 58, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container li .orbit-caption {
   font-size: 1em;
   width: inherit;
@@ -9710,20 +9755,20 @@ a:hover {
   position: inherit;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 53, ../scss/_writing-image-slider.scss */
+  /* line 58, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container li .orbit-caption {
     background: rgba(0, 0, 0, 0.3);
     position: absolute;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 53, ../scss/_writing-image-slider.scss */
+  /* line 58, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container li .orbit-caption {
     right: 0;
     height: 100%;
     width: 25%;
     background: inherit;
     color: #333333;
-    padding: 10em 2.5em 0 1.5em;
+    padding: 8em 2.5em 0 1.5em;
   }
 }
