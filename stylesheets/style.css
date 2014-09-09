@@ -9452,21 +9452,26 @@ a:hover {
 #writing .hero-wrapper .row .content {
   position: absolute;
   bottom: 10%;
-  padding: 0 12%;
 }
-/* line 29, ../scss/_writing-hero.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 24, ../scss/_writing-hero.scss */
+  #writing .hero-wrapper .row .content {
+    padding: 0 12%;
+  }
+}
+/* line 32, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text {
   width: 100%;
 }
-/* line 32, ../scss/_writing-hero.scss */
+/* line 35, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text h1, #writing .hero-wrapper .row .content .text p {
   color: white;
 }
-/* line 35, ../scss/_writing-hero.scss */
+/* line 38, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text p {
   font-style: italic;
 }
-/* line 46, ../scss/_writing-hero.scss */
+/* line 49, ../scss/_writing-hero.scss */
 #writing.writing-title-example .hero-wrapper {
   background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
   background-size: cover;
@@ -9479,7 +9484,7 @@ a:hover {
   background-color: rgba(119, 119, 119, 0.8);
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 46, ../scss/_writing-hero.scss */
+  /* line 49, ../scss/_writing-hero.scss */
   #writing.writing-title-example .hero-wrapper {
     background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
     background-size: cover;
@@ -9491,7 +9496,7 @@ a:hover {
     background-color: rgba(119, 119, 119, 0.5);
   }
 }
-/* line 56, ../scss/_writing-hero.scss */
+/* line 59, ../scss/_writing-hero.scss */
 #writing.things-you-dont-learn-in-college .hero-wrapper {
   background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
   background-size: cover;
@@ -9504,7 +9509,7 @@ a:hover {
   background-color: rgba(119, 119, 119, 0.8);
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 56, ../scss/_writing-hero.scss */
+  /* line 59, ../scss/_writing-hero.scss */
   #writing.things-you-dont-learn-in-college .hero-wrapper {
     background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
     background-size: cover;
