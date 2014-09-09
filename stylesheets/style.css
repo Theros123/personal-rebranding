@@ -9191,16 +9191,11 @@ a:hover {
 }
 /* line 10, ../scss/_about-hero.scss */
 #about .hero-wrapper {
-  height: 100%;
-  height: -moz-calc(100% - 60px);
-  height: -webkit-calc(100% - 60px);
-  height: calc(100% - 60px);
   background: transparent url(../images/about/hero.png) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  min-height: 400px;
-  max-height: 450px;
+  height: 450px;
   position: relative;
 }
 /* line 106, ../scss/_mixins.scss */
@@ -9211,48 +9206,52 @@ a:hover {
 @media only screen and (min-width: 40.063em) {
   /* line 10, ../scss/_about-hero.scss */
   #about .hero-wrapper {
+    height: 100%;
+    height: -moz-calc(100% - 60px);
+    height: -webkit-calc(100% - 60px);
+    height: calc(100% - 60px);
     max-height: 500px;
   }
 }
-/* line 27, ../scss/_about-hero.scss */
+/* line 26, ../scss/_about-hero.scss */
 #about .hero-wrapper .row {
   position: relative;
   height: 100%;
 }
-/* line 31, ../scss/_about-hero.scss */
+/* line 30, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content {
   position: absolute;
   bottom: 10%;
 }
-/* line 35, ../scss/_about-hero.scss */
+/* line 34, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text {
   width: 100%;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 35, ../scss/_about-hero.scss */
+  /* line 34, ../scss/_about-hero.scss */
   #about .hero-wrapper .row .content .text {
     width: 80%;
   }
 }
-/* line 42, ../scss/_about-hero.scss */
+/* line 41, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text h1, #about .hero-wrapper .row .content .text p {
   color: white;
 }
-/* line 45, ../scss/_about-hero.scss */
+/* line 44, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text h1 {
   font-size: 2em;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 49, ../scss/_about-hero.scss */
+  /* line 48, ../scss/_about-hero.scss */
   #about .hero-wrapper .row .content .text h1 {
     font-size: 3.5em;
   }
 }
-/* line 53, ../scss/_about-hero.scss */
+/* line 52, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text p {
   font-style: italic;
 }
-/* line 56, ../scss/_about-hero.scss */
+/* line 55, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text p:before {
   content: "\2014 \0020";
 }

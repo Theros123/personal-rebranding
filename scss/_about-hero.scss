@@ -8,16 +8,15 @@
 }
 
 .hero-wrapper {
-	// Need double quotes and spacing between numbers
-	@include calc(height, "100% - 60px");
 	@include background($filename: '../images/about/hero.png', $bgcolor: rgba($grey,.5), $bgattachment: fixed);
 	background-position: center;
 
 	// Fall back to prevent clipping when browser height is too small
-	min-height: 400px;
-	max-height: 450px;
+	height: 450px;
 
 	@media #{$medium-up} {
+		// Need double quotes and spacing between numbers
+		@include calc(height, "100% - 60px");
 		max-height: 500px;
 	}
 
