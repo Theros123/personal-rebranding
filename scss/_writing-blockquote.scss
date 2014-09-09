@@ -17,7 +17,9 @@
 	}
 
 	.content {
-		padding: 0 12%;
+		@media #{$medium-up} {
+			padding: 0 12%;
+		}
 	}
 	
 	.text {
