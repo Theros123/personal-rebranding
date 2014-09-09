@@ -7,8 +7,10 @@
 	@extend %footer;
 
 	.content {
-		padding-right: 12%;
-		padding-left: 12%;
+		@media #{$medium-up} {
+			padding-right: 12%;
+			padding-left: 12%;
+		}
 	}
 	
 	h4 {
