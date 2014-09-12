@@ -6,9 +6,15 @@
 .image {
 	@extend %content-section-styling;
 	padding: 0;
-	margin: 3em 0 0;
+	margin: 3em 0 2em;
 	background: $lightGrey;
 
+	.content {
+		padding: 0;
+		@media #{$medium-up} {
+			padding: 0 10%;
+		}
+	}
 	img {
 		width: 100%;
 	}

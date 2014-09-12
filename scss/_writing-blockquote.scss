@@ -15,6 +15,12 @@
 	&.last {
 		padding-bottom: $sectionPadding;
 	}
+
+	.content {
+		@media #{$medium-up} {
+			padding: 0 12%;
+		}
+	}
 	
 	.text {
 		@include grid-column(12);

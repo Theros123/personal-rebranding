@@ -17,6 +17,13 @@
 		padding-bottom: $sectionPadding;
 	}
 	
+	.content {
+
+		@media #{$medium-up} {
+			padding: 0 12%;
+		}
+	}
+
 	.column {
 
 		&.columns {

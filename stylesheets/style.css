@@ -8786,31 +8786,31 @@ a:hover {
 }
 
 /* line 21, ../scss/_mixins.scss */
-#homepage .hero-wrapper .row .homepage-nav i, #about .skills .column i, #about .companies .column i {
-  text-align: center;
-  float: left;
+#homepage .hero-wrapper .row .homepage-nav i, #about .skills .list-item i, #about .companies .list-item i {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
 }
-/* line 25, ../scss/_mixins.scss */
-#homepage .hero-wrapper .row .homepage-nav p, #about .skills .column p, #about .companies .column p {
+/* line 26, ../scss/_mixins.scss */
+#homepage .hero-wrapper .row .homepage-nav p, #about .skills .list-item p, #about .companies .list-item p {
+  display: inline-block;
+  width: 80%;
   margin-top: -5px;
   margin-bottom: 0;
+  padding-left: 5px;
 }
 
-/* line 32, ../scss/_mixins.scss */
+/* line 36, ../scss/_mixins.scss */
 #writing .blockquote h2, #writing .column-text h2 {
-  padding: 1em 0 0.5em;
+  padding: 1em 0 0;
 }
-/* line 35, ../scss/_mixins.scss */
+/* line 39, ../scss/_mixins.scss */
 #writing .blockquote h3, #writing .column-text h3 {
-  padding: 0.5em 0;
-}
-/* line 38, ../scss/_mixins.scss */
-#writing .blockquote p, #writing .column-text p {
-  padding-top: 1em;
+  padding: 0.5em 0 0;
 }
 /* line 42, ../scss/_mixins.scss */
-#writing .blockquote p:first-child, #writing .column-text p:first-child {
-  padding-top: 0;
+#writing .blockquote p, #writing .column-text p {
+  padding-top: 1em;
 }
 
 /* line 46, ../scss/_mixins.scss */
@@ -8855,21 +8855,6 @@ a:hover {
 #homepage #footer .content i, #about #footer .content i, #writing #footer .content i {
   margin-left: .3em;
   font-size: 1.3em;
-}
-
-/* line 86, ../scss/_mixins.scss */
-#about .companies .column {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-/* line 92, ../scss/_mixins.scss */
-#about .companies .column img {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 /* line 4, ../scss/_homepage-hero.scss */
@@ -9040,12 +9025,12 @@ a:hover {
 }
 /* line 104, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .homepage-nav li i {
-  padding-bottom: 1em;
-  text-align: left;
+  padding-bottom: 0;
 }
-/* line 109, ../scss/_homepage-hero.scss */
+/* line 108, ../scss/_homepage-hero.scss */
 #homepage .hero-wrapper .row .homepage-nav li p {
-  margin-left: 45px;
+  margin-left: 0;
+  padding-left: 15px;
 }
 /* line 2, ../scss/_homepage-hero-footer.scss */
 #homepage .content {
@@ -9206,14 +9191,11 @@ a:hover {
 }
 /* line 10, ../scss/_about-hero.scss */
 #about .hero-wrapper {
-  height: 100%;
-  height: -moz-calc(100% - 60px);
-  height: -webkit-calc(100% - 60px);
-  height: calc(100% - 60px);
   background: transparent url(../images/about/hero.png) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 350px;
+  background-position: center;
+  height: 450px;
   position: relative;
 }
 /* line 106, ../scss/_mixins.scss */
@@ -9224,38 +9206,52 @@ a:hover {
 @media only screen and (min-width: 40.063em) {
   /* line 10, ../scss/_about-hero.scss */
   #about .hero-wrapper {
+    height: 100%;
+    height: -moz-calc(100% - 60px);
+    height: -webkit-calc(100% - 60px);
+    height: calc(100% - 60px);
     max-height: 500px;
   }
 }
-/* line 27, ../scss/_about-hero.scss */
+/* line 26, ../scss/_about-hero.scss */
 #about .hero-wrapper .row {
   position: relative;
   height: 100%;
 }
-/* line 31, ../scss/_about-hero.scss */
+/* line 30, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content {
   position: absolute;
   bottom: 10%;
 }
-/* line 35, ../scss/_about-hero.scss */
+/* line 34, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text {
   width: 100%;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 35, ../scss/_about-hero.scss */
+  /* line 34, ../scss/_about-hero.scss */
   #about .hero-wrapper .row .content .text {
     width: 80%;
   }
 }
-/* line 42, ../scss/_about-hero.scss */
+/* line 41, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text h1, #about .hero-wrapper .row .content .text p {
   color: white;
 }
-/* line 45, ../scss/_about-hero.scss */
+/* line 44, ../scss/_about-hero.scss */
+#about .hero-wrapper .row .content .text h1 {
+  font-size: 2em;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 48, ../scss/_about-hero.scss */
+  #about .hero-wrapper .row .content .text h1 {
+    font-size: 3.5em;
+  }
+}
+/* line 52, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text p {
   font-style: italic;
 }
-/* line 48, ../scss/_about-hero.scss */
+/* line 55, ../scss/_about-hero.scss */
 #about .hero-wrapper .row .content .text p:before {
   content: "\2014 \0020";
 }
@@ -9343,40 +9339,55 @@ a:hover {
   color: white;
 }
 /* line 14, ../scss/_about-skills.scss */
-#about .skills .column {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+#about .skills .list-item {
+  display: inline-block;
   width: 100%;
-  float: left;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  vertical-align: top;
   padding-top: 1.5em;
 }
 @media only screen and (min-width: 40.063em) {
   /* line 14, ../scss/_about-skills.scss */
-  #about .skills .column {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+  #about .skills .list-item {
     width: 50%;
-    float: left;
     padding-top: 2em;
+    padding-right: .5em;
+    padding-left: .5em;
   }
 }
 @media only screen and (min-width: 64.063em) {
   /* line 14, ../scss/_about-skills.scss */
-  #about .skills .column {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
+  #about .skills .list-item {
+    width: 33.333%;
   }
 }
-/* line 28, ../scss/_about-skills.scss */
-#about .skills .column i, #about .skills .column p {
+/* line 35, ../scss/_about-skills.scss */
+#about .skills .list-item i, #about .skills .list-item p {
   color: white;
 }
-/* line 31, ../scss/_about-skills.scss */
-#about .skills .column i {
+/* line 38, ../scss/_about-skills.scss */
+#about .skills .list-item i {
   font-size: 2.8em;
-  margin-right: 10px;
+  width: 17%;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 38, ../scss/_about-skills.scss */
+  #about .skills .list-item i {
+    width: 20%;
+  }
+}
+/* line 46, ../scss/_about-skills.scss */
+#about .skills .list-item p {
+  width: 83%;
+  padding-left: 20px;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 46, ../scss/_about-skills.scss */
+  #about .skills .list-item p {
+    width: 80%;
+    padding-left: 5px;
+  }
 }
 /* line 2, ../scss/_about-companies.scss */
 #about .content {
@@ -9389,28 +9400,20 @@ a:hover {
 #about .companies {
   background: #f7f7f7;
 }
-@media only screen and (min-width: 40.063em) {
-  /* line 6, ../scss/_about-companies.scss */
-  #about .companies {
-    max-height: 300px;
-  }
-}
-/* line 15, ../scss/_about-companies.scss */
-#about .companies .column {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+/* line 10, ../scss/_about-companies.scss */
+#about .companies .list-item {
+  display: inline-block;
   width: 50%;
-  float: left;
-  margin-top: 2.5em;
-  min-height: 60px;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 1.5em;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 15, ../scss/_about-companies.scss */
-  #about .companies .column {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+  /* line 10, ../scss/_about-companies.scss */
+  #about .companies .list-item {
     width: 25%;
-    float: left;
   }
 }
 /* line 2, ../scss/_about-footer.scss */
@@ -9449,15 +9452,15 @@ a:hover {
   position: absolute;
   bottom: 10%;
 }
-/* line 28, ../scss/_writing-hero.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 24, ../scss/_writing-hero.scss */
+  #writing .hero-wrapper .row .content {
+    padding: 0 12%;
+  }
+}
+/* line 32, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text {
   width: 100%;
-}
-@media only screen and (min-width: 40.063em) {
-  /* line 28, ../scss/_writing-hero.scss */
-  #writing .hero-wrapper .row .content .text {
-    width: 70%;
-  }
 }
 /* line 35, ../scss/_writing-hero.scss */
 #writing .hero-wrapper .row .content .text h1, #writing .hero-wrapper .row .content .text p {
@@ -9469,25 +9472,53 @@ a:hover {
 }
 /* line 49, ../scss/_writing-hero.scss */
 #writing.writing-title-example .hero-wrapper {
-  background: transparent url(../images/writings/slideshows/example/1.jpg) no-repeat;
+  background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 /* line 106, ../scss/_mixins.scss */
 #writing.writing-title-example .hero-wrapper .tint-wrapper {
   height: 100%;
-  background-color: rgba(119, 119, 119, 0.5);
+  background-color: rgba(119, 119, 119, 0.8);
 }
-/* line 54, ../scss/_writing-hero.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 49, ../scss/_writing-hero.scss */
+  #writing.writing-title-example .hero-wrapper {
+    background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  /* line 106, ../scss/_mixins.scss */
+  #writing.writing-title-example .hero-wrapper .tint-wrapper {
+    height: 100%;
+    background-color: rgba(119, 119, 119, 0.5);
+  }
+}
+/* line 59, ../scss/_writing-hero.scss */
 #writing.things-you-dont-learn-in-college .hero-wrapper {
   background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 /* line 106, ../scss/_mixins.scss */
 #writing.things-you-dont-learn-in-college .hero-wrapper .tint-wrapper {
   height: 100%;
-  background-color: rgba(119, 119, 119, 0.5);
+  background-color: rgba(119, 119, 119, 0.8);
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 59, ../scss/_writing-hero.scss */
+  #writing.things-you-dont-learn-in-college .hero-wrapper {
+    background: transparent url(../images/writings/things-you-dont-learn-in-college/hero.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  /* line 106, ../scss/_mixins.scss */
+  #writing.things-you-dont-learn-in-college .hero-wrapper .tint-wrapper {
+    height: 100%;
+    background-color: rgba(119, 119, 119, 0.5);
+  }
 }
 /* line 2, ../scss/_writing-footer.scss */
 #writing .content {
@@ -9496,7 +9527,14 @@ a:hover {
   width: 100%;
   float: left;
 }
-/* line 9, ../scss/_writing-footer.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 9, ../scss/_writing-footer.scss */
+  #writing #footer .content {
+    padding-right: 12%;
+    padding-left: 12%;
+  }
+}
+/* line 16, ../scss/_writing-footer.scss */
 #writing #footer h4 {
   border-top: 1px solid grey;
   padding-top: 1.5em;
@@ -9516,7 +9554,13 @@ a:hover {
 #writing .blockquote.last {
   padding-bottom: 3em;
 }
-/* line 19, ../scss/_writing-blockquote.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 19, ../scss/_writing-blockquote.scss */
+  #writing .blockquote .content {
+    padding: 0 12%;
+  }
+}
+/* line 25, ../scss/_writing-blockquote.scss */
 #writing .blockquote .text {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -9524,7 +9568,7 @@ a:hover {
   float: left;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 19, ../scss/_writing-blockquote.scss */
+  /* line 25, ../scss/_writing-blockquote.scss */
   #writing .blockquote .text {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -9532,11 +9576,11 @@ a:hover {
     float: left;
   }
 }
-/* line 27, ../scss/_writing-blockquote.scss */
+/* line 33, ../scss/_writing-blockquote.scss */
 #writing .blockquote .text p:last-child {
   margin-bottom: 0;
 }
-/* line 31, ../scss/_writing-blockquote.scss */
+/* line 37, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -9545,7 +9589,7 @@ a:hover {
   padding-top: 1em;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 31, ../scss/_writing-blockquote.scss */
+  /* line 37, ../scss/_writing-blockquote.scss */
   #writing .blockquote .quote {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -9553,14 +9597,14 @@ a:hover {
     float: left;
   }
 }
-/* line 39, ../scss/_writing-blockquote.scss */
+/* line 45, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote blockquote {
   color: #ff8a00;
   font-size: 1.5em;
   line-height: 1.3;
   border: none;
 }
-/* line 45, ../scss/_writing-blockquote.scss */
+/* line 51, ../scss/_writing-blockquote.scss */
 #writing .blockquote .quote cite {
   margin-top: 1em;
 }
@@ -9579,7 +9623,13 @@ a:hover {
 #writing .column-text.last {
   padding-bottom: 3em;
 }
-/* line 22, ../scss/_writing-text.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 20, ../scss/_writing-text.scss */
+  #writing .column-text .content {
+    padding: 0 12%;
+  }
+}
+/* line 29, ../scss/_writing-text.scss */
 #writing .column-text .column.columns {
   column-count: 1;
   -moz-column-count: 1;
@@ -9593,7 +9643,7 @@ a:hover {
   column-gap: 0;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 22, ../scss/_writing-text.scss */
+  /* line 29, ../scss/_writing-text.scss */
   #writing .column-text .column.columns {
     column-count: 2;
     -moz-column-count: 2;
@@ -9607,7 +9657,7 @@ a:hover {
     column-gap: 2em;
   }
 }
-/* line 30, ../scss/_writing-text.scss */
+/* line 37, ../scss/_writing-text.scss */
 #writing .column-text .column p {
   margin-bottom: 0;
 }
@@ -9621,14 +9671,24 @@ a:hover {
 /* line 6, ../scss/_writing-image.scss */
 #writing .image {
   padding: 0;
-  margin: 3em 0 0;
+  margin: 3em 0 2em;
   background: #f7f7f7;
 }
 /* line 12, ../scss/_writing-image.scss */
+#writing .image .content {
+  padding: 0;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 12, ../scss/_writing-image.scss */
+  #writing .image .content {
+    padding: 0 10%;
+  }
+}
+/* line 18, ../scss/_writing-image.scss */
 #writing .image img {
   width: 100%;
 }
-/* line 15, ../scss/_writing-image.scss */
+/* line 21, ../scss/_writing-image.scss */
 #writing .image .image-caption {
   font-size: 1em;
   width: inherit;
@@ -9637,7 +9697,7 @@ a:hover {
   color: white;
   padding: 1em 0.9375rem;
 }
-/* line 28, ../scss/_writing-image.scss */
+/* line 34, ../scss/_writing-image.scss */
 #writing .image.last {
   padding-bottom: 3em;
 }
@@ -9651,7 +9711,7 @@ a:hover {
 /* line 6, ../scss/_writing-image-slider.scss */
 #writing .image-slider {
   padding: 0;
-  margin: 3em 0 0;
+  margin: 3em 0 2em;
   background: #f7f7f7;
 }
 /* line 16, ../scss/_writing-image-slider.scss */
@@ -9666,41 +9726,47 @@ a:hover {
 #writing .image-slider a.orbit-next:hover, #writing .image-slider a.orbit-prev:hover {
   background: rgba(51, 51, 51, 0.7);
 }
-/* line 28, ../scss/_writing-image-slider.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 28, ../scss/_writing-image-slider.scss */
+  #writing .image-slider .content {
+    padding: 0 10%;
+  }
+}
+/* line 33, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container {
   height: 320px;
   overflow: hidden;
   position: relative;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 28, ../scss/_writing-image-slider.scss */
+  /* line 33, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container {
     height: 400px;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 28, ../scss/_writing-image-slider.scss */
+  /* line 33, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container {
-    height: 500px;
+    height: 415px;
   }
 }
-/* line 41, ../scss/_writing-image-slider.scss */
+/* line 46, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container li {
   height: 100%;
 }
-/* line 44, ../scss/_writing-image-slider.scss */
+/* line 49, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container li img {
   width: 100%;
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 44, ../scss/_writing-image-slider.scss */
+  /* line 49, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container li img {
     position: absolute;
     left: 0;
     max-width: 75%;
   }
 }
-/* line 53, ../scss/_writing-image-slider.scss */
+/* line 58, ../scss/_writing-image-slider.scss */
 #writing .image-slider .orbit-slides-container li .orbit-caption {
   font-size: 1em;
   width: inherit;
@@ -9710,20 +9776,20 @@ a:hover {
   position: inherit;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 53, ../scss/_writing-image-slider.scss */
+  /* line 58, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container li .orbit-caption {
     background: rgba(0, 0, 0, 0.3);
     position: absolute;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 53, ../scss/_writing-image-slider.scss */
+  /* line 58, ../scss/_writing-image-slider.scss */
   #writing .image-slider .orbit-slides-container li .orbit-caption {
     right: 0;
     height: 100%;
     width: 25%;
     background: inherit;
     color: #333333;
-    padding: 10em 2.5em 0 1.5em;
+    padding: 8em 2.5em 0 1.5em;
   }
 }

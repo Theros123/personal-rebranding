@@ -5,6 +5,13 @@
 
 #footer {
 	@extend %footer;
+
+	.content {
+		@media #{$medium-up} {
+			padding-right: 12%;
+			padding-left: 12%;
+		}
+	}
 	
 	h4 {
 		border-top: 1px solid grey;

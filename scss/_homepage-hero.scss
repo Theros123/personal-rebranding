@@ -103,11 +103,11 @@
 
 				i {
 					// To force text to the right of icon always
-					padding-bottom: 1em;
-					text-align: left;
+					padding-bottom: 0;
 				}
 				p {
-					margin-left: 45px;
+					margin-left: 0;
+					padding-left: 15px;
 				}
 			}
 		}
